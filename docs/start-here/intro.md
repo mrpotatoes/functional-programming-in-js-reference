@@ -11,7 +11,28 @@ Essentialy the first way you'll see this is a `switch` statement. You could also
 
 # Quickstart
 ## Terms & Things
-### Sum & Product types
+###Product types
+Product types are simple and we're all used to them. From a definition standpoint they are called `product types` becase "they're analogous to cartesian products of sets. For instance `int` * `float` is the tuple `(int, float)`".
+
+So for instance this `Car` type is a `product`.
+```js
+const Car = {
+  Brand: String,
+  Model: String,
+  Release: Date,
+  Engine: EngineType,
+}
+```
+
+### Sum Types
+A `sum type` is a type that is exclusive-or. Meaning one **MUST** be true and the others **MUST** be false. Given the following Sum Type Only one can be true and the others are false. I'll defer to someone else's words to explain it better below but the following example shows it a little clearer.
+
+```js
+const PlayingCardSuit = {
+  Heart, Spade, Club, Diamond,
+}
+```
+
 ### Abstract Data Type
 > An algebraic data type is a kind of composite type, i.e., a type formed by combining other types - Wikipedia
 
@@ -36,8 +57,10 @@ const value = (tag) => {
 }
 ```
 
-## What does it look like?
 ## How to use it
+
+# Okay, let's get to serious business now ...
+_SERIOUS BUSINESS_
 
 <!-- 
 
