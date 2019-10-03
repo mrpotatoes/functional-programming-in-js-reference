@@ -1,0 +1,14 @@
+https://dev.to/gcanti/functional-design-algebraic-data-types-36kf
+https://chadaustin.me/2015/07/sum-types/
+https://mariusschulz.com/blog/tagged-union-types-in-typescript
+https://www.fewbutripe.com/swift/math/algebra/2015/02/17/algebraic-structure-and-protocols.html
+https://creaturephil.github.io/posts/build-your-own-daggy/
+https://medium.com/fullstack-academy/better-js-cases-with-sum-types-92876e48fd9f
+https://dev.to/moosch/sum-types-in-javascript-15il
+https://datarockets.com/blog/javascript-pattern-matching-library-daggy/
+https://dev.to/avalander/union-types-with-javascript-4emo
+https://marmelab.com/blog/2018/03/14/functional-programming-1-unit-of-code.html
+
+MATH EXPLAINATIONS
+https://whatis.techtarget.com/definition/union-symbol
+https://whatis.techtarget.com/definition/intersection-symbol

@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-* [Intro](intro.md)
+<!-- * [Intro](intro.md) -->
 
 * Start Here
   * [Start Here](start-here/intro.md "Start here")
@@ -42,3 +42,6 @@
 
 * Patterns
   * []()
+
+* Evangelism
+  * ...
