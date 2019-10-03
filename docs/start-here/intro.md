@@ -63,6 +63,7 @@ const value = (tag) => {
 _SERIOUS BUSINESS_
 
 <hr />
+
 # More information
 
 [Sum Types Are Coming: What You Should Know](https://chadaustin.me/2015/07/sum-types/)
