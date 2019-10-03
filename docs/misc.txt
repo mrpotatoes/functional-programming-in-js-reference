@@ -9,6 +9,8 @@ https://datarockets.com/blog/javascript-pattern-matching-library-daggy/
 https://dev.to/avalander/union-types-with-javascript-4emo
 https://marmelab.com/blog/2018/03/14/functional-programming-1-unit-of-code.html
 
+https://jaysoo.ca/2016/01/13/functional-programming-little-ideas/
+
 MATH EXPLAINATIONS
 https://whatis.techtarget.com/definition/union-symbol
 https://whatis.techtarget.com/definition/intersection-symbol
