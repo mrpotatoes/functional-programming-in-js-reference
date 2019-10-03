@@ -1,3 +1,5 @@
+http://blog.jenkster.com/2016/06/functional-mumbo-jumbo-adts.html
+
 ---------------------------
 > This is a type where we specify the shape of each of the elements. Wikipedia has a thorough discussion. "Algebraic" refers to the property that an Algebraic Data Type is created by "algebraic" operations. The "algebra" here is "sums" and "products":
 > 
