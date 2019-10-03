@@ -62,37 +62,41 @@ const value = (tag) => {
 # Okay, let's get to serious business now ...
 _SERIOUS BUSINESS_
 
-<!-- 
+<hr />
+# More information
 
-** Bibliography, or notes to self **
+[Sum Types Are Coming: What You Should Know](https://chadaustin.me/2015/07/sum-types/)
+  - Highly recommended read
+  - Excellent theory
+  - Goes into detail about sum types
 
-https://waleedkhan.name/blog/union-vs-sum-types/
-	- For theory.
-	- Handling nulls and such.
+[Functional Mumbo Jumbo - ADTs](http://blog.jenkster.com/2016/06/functional-mumbo-jumbo-adts.html)
 
-https://dev.to/moosch/sum-types-in-javascript-15il
-	- For showing how it works with a switch statement.
+[Null-tracking, or the difference between union and sum types](https://waleedkhan.name/blog/union-vs-sum-types/)
+  - For theory.
+  - Handling nulls and such.
 
-https://folktale.origamitower.com/api/v2.1.0/en/folktale.adt.union.union.union.html
-	- For these titles:
-		- Why use tagged unions?
-		- Modelling data with adt/union
-		- Providing common functionality
+[Sum Types in JavaScript](https://dev.to/moosch/sum-types-in-javascript-15il)
+  - For showing how it works with a switch statement.
 
-https://github.com/hemanth/functional-programming-jargon#algebraic-data-type
-	- So many terms but not enough information.
+[FolkTale: Union type docs](https://folktale.origamitower.com/api/v2.1.0/en/folktale.adt.union.union.union.html)
+  - For these titles:
+    - Why use tagged unions?
+    - Modelling data with adt/union
+    - Providing common functionality
 
-https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types
-	- If I wanna try to be really smart
-		- Prolly don't.
+[Functionl Programming Jargon](https://github.com/hemanth/functional-programming-jargon#algebraic-data-type)
+  - So many terms but not enough information.
 
-https://www.youtube.com/watch?v=Up7LcbGZFuo
-	- Domain Modeling Made Functional - Scott Wlaschin
+[The algebra (and calculus!) of algebraic data types](https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types)
+  - If I wanna try to be really smart
+    - Prolly don't.
 
-https://medium.com/@notgiorgi/algebraic-data-types-explained-in-statically-typed-javascript-4ad31c2b12c9
-	- Lots of theory
+[Domain Modeling Made Functional - Scott Wlaschin](https://www.youtube.com/watch?v=Up7LcbGZFuo)
+  - **NOTE**: Haven't watched just yet
 
-https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/sum-types
-	- A Haskell description
+[Algebraic Data Types explained in Statically typed Javascript](https://medium.com/@notgiorgi/algebraic-data-types-explained-in-statically-typed-javascript-4ad31c2b12c9)
+  - Lots of theory
 
--->
+[Sum Types](https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/sum-types)
+  - A Haskell description
