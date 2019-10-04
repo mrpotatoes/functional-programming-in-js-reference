@@ -3,7 +3,10 @@
 I want people to get eyes on this. Add to it and make it better. So make sure to do that. Even if not done make sure to still advertise once you get the Algebras & Laws finished (including code).
 
 ## General TODOs
-- [ ] Fix collapse if a heading doesn't have children.
+Not in priority order
+- [ ] Fix collapse if a heading doesn't have children
+- [ ] Everything shouldn't be opened if I click on the parent.
+	- [ ] Keep children closed.
 - [ ] Definition of Done
 - [ ] Code in `computer-science-in-javascript` repo is moved to here
 - [ ] Laws are testable

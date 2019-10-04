@@ -9,7 +9,7 @@
     * [Custom Daggy](foundational/adts/custom-daggy.md)
     * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
-  * [Type Signatures](foundational/type-signatures.md)
+  * [Type Signatures](foundational/type-signatures/explain.md)
 
 * Laws (0/16 complete)
   * [Annihilation](laws/annihilation.md)
