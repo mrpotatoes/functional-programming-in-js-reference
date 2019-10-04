@@ -633,9 +633,16 @@ body {
 .sidebar li {
   margin: 6px 0 6px 0;
 }
+
+.sidebar ul li p a {
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+}
+
 .sidebar ul li a {
   color: #505d6b;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   overflow: hidden;
   text-decoration: none;
@@ -930,9 +937,9 @@ ul.tags {
 }
 
 .SideBarCollapse-ItemOpened {
-  background-image: var(--sidebar-nav-pagelink-background-image--active, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
+  /*background-image: var(--sidebar-nav-pagelink-background-image--active, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
   background-position: var(--sidebar-nav-pagelink-background-position);
   background-repeat: var(--sidebar-nav-pagelink-background-repeat);
   background-size: var(--sidebar-nav-pagelink-background-size);
-  padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
+  padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));*/
 }

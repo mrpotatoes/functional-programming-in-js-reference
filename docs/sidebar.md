@@ -29,20 +29,28 @@
   * [Totality](laws/totality.md)
   * [Transitivity](laws/transitivity.md)
 
-* [Not Started] Lens
-  * ...
+* Advanced Topics (0%)
+  * ~Lens~
+    * n/a
+  * ~Transducers~
+    * n/a
+  * ~Patterns~
+    * n/a
+  * ~Evangelism~
+    * n/a
+  * ~Cookbook~
+    * n/a
 
-* [Not Started] Transducers
-  * ...
+* Cookbook
+  * ~Patterns~
+  * ~Recursive fun~
+  * ~CQRS/ES~
+  * ~Handling state~
 
-* [Not Started] Patterns
-  * ...
-
-* [Not Started] Evangelism
-  * ...
-
-* [Not Started] Cookbook
-  * ...
+* Example Projects
+  * ~Example 1~
+  * ~Example 2~
+  * ~Example 3~
 
 * Misc
   * [Credits & Contributors](misc/credits-and-contributors.md)
