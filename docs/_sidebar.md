@@ -1,11 +1,11 @@
-* Foundational (Incomplete)
+* Foundational (0.5/94 complete)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
     * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
   * [Type Signatures](foundational/type-signatures.md)
 
-* Laws (Incomplete)
+* Laws (0/16 complete)
   * [Annihilation](laws/annihilation.md)
   * [Antisymmetry](laws/antisymmetry.md)
   * [Associativity](laws/associativity.md)
