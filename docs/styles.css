@@ -906,31 +906,8 @@ ul.tags {
 /****************** Custom Sidebar *****************/
 /***************************************************/
 /***************************************************/
-.sidebar-nav > ul > li ul {
-/*.sidebar-nav > ul > li ul > li {*/
-  display: none;
-}
 
-.app-sub-sidebar {
-  display: none;
-}
-
-.app-sub-sidebar.open {
-  display: block;
-}
-
-.sidebar-nav .open > ul:not(.app-sub-sidebar),
-.sidebar-nav .active:not(.hold) > ul {
-  display: block;
-}
-
-.active + ul.app-sub-sidebar {
-  display: block;
-}
-
-
-
-/*.SideBarCollapse-ItemClosed {
+.SideBarCollapse-ItemClosed {
     background-image: var(--sidebar-nav-pagelink-background-image);
     background-position: var(--sidebar-nav-pagelink-background-position);
     background-repeat: var(--sidebar-nav-pagelink-background-repeat);
@@ -945,30 +922,3 @@ ul.tags {
     background-size: var(--sidebar-nav-pagelink-background-size);
     padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
