@@ -24,13 +24,13 @@
   * [Transitivity](laws/transitivity.md)
 
 * [Not Started] Lens
-  * []()
+  * ...
 
 * [Not Started] Transducers
-  * []()
+  * ...
 
 * [Not Started] Patterns
-  * []()
+  * ...
 
 * [Not Started] Evangelism
   * ...
