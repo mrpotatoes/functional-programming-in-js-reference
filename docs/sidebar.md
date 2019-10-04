@@ -4,12 +4,56 @@
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
 
-* Algebras (0.5/94 complete)
+* Algebras (0/73 complete)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
     * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
   * [Type Signatures](foundational/type-signatures/explain.md)
+  * [~Alt~](foundational/alt/explain.md)
+    <!-- * [Code](foundational/alt/code.md) -->
+  * [~Alternative~](foundational/alternative/explain.md)
+    <!-- * [Code](foundational/alternative/code.md) -->
+  * [~Applicative~](foundational/applicative/explain.md)
+    <!-- * [Code](foundational/applicative/code.md) -->
+  * [~Apply~](foundational/apply/explain.md)
+    <!-- * [Code](foundational/apply/code.md) -->
+  * [~Bifunctor~](foundational/bifunctor/explain.md)
+    <!-- * [Code](foundational/bifunctor/code.md) -->
+  * [~Category~](foundational/category/explain.md)
+    <!-- * [Code](foundational/category/code.md) -->
+  * [~Chain~](foundational/chain/explain.md)
+    <!-- * [Code](foundational/chain/code.md) -->
+  * [~Chainrec~](foundational/chainrec/explain.md)
+    <!-- * [Code](foundational/chainrec/code.md) -->
+  * [~Comonad~](foundational/comonad/explain.md)
+    <!-- * [Code](foundational/comonad/code.md) -->
+  * [~Contravariant~](foundational/contravariant/explain.md)
+    <!-- * [Code](foundational/contravariant/code.md) -->
+  * [~Extend~](foundational/extend/explain.md)
+    <!-- * [Code](foundational/extend/code.md) -->
+  * [~Foldable~](foundational/foldable/explain.md)
+    <!-- * [Code](foundational/foldable/code.md) -->
+  * [~Functor~](foundational/functor/explain.md)
+    <!-- * [Code](foundational/functor/code.md) -->
+  * [~Monad~](foundational/monad/explain.md)
+    <!-- * [Code](foundational/monad/code.md) -->
+  * [~Monoid~](foundational/monoid/explain.md)
+    <!-- * [Code](foundational/monoid/code.md) -->
+  * [~Ord~](foundational/ord/explain.md)
+    <!-- * [Code](foundational/ord/code.md) -->
+  * [~Plus~](foundational/plus/explain.md)
+    <!-- * [Code](foundational/plus/code.md) -->
+  * [~Profunctor~](foundational/profunctor/explain.md)
+    <!-- * [Code](foundational/profunctor/code.md) -->
+  * [~Semigroup~](foundational/semigroup/explain.md)
+    <!-- * [Code](foundational/semigroup/code.md) -->
+  * [Se~migroupoid~](foundational/semigroupoid/explain.md)
+      <!-- * [Code](foundational/semigroupoid/code.md) -->
+  * [~Setoid~](foundational/setoid/explain.md)
+    <!-- * [Code](foundational/setoid/code.md) -->
+  * [~Traversable~](foundational/traversable/explain.md)
+    <!-- * [Code](foundational/traversable/code.md) -->
 
 * Laws (0/16 complete)
   * [Annihilation](laws/annihilation.md)
@@ -28,6 +72,9 @@
   * [Symmetry](laws/symmetry.md)
   * [Totality](laws/totality.md)
   * [Transitivity](laws/transitivity.md)
+
+* Functions
+  * [~Explain~](functions/todo.md)
 
 * Advanced Topics (0%)
   * ~Lens~
