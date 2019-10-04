@@ -4,7 +4,7 @@
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
 
-* Foundational (0.5/94 complete)
+* Algebras (0.5/94 complete)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
     * [Maths](foundational/adts/maths.md)
@@ -47,10 +47,11 @@
 * Misc
   * [Credits & Contributors](misc/credits-and-contributors.md)
 
-<!--
-- **Links**
-  - [Link 1](laws/transitivity.md)
-  - [Link 1](laws/transitivity.md)
-  - [Link 1](laws/transitivity.md)
-  - [Link 1](laws/transitivity.md)
--->
+<div class="misc-links">
+
+- **Links (breaks on log lists)**
+  - [Fantasy Land](https://github.com/fantasyland/fantasy-land ':target=_blank')
+  - [Static Land](https://github.com/fantasyland/static-land ':target=_blank')
+  - [Tom Harding](http://tomharding.me ':target=_blank')
+
+<div>

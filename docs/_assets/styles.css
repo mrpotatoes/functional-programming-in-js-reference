@@ -649,7 +649,7 @@ body {
   padding: 0;
 }
 .sidebar ul li.active > a {
-  border-right: 2px solid;
+  border-right: 10px solid;
   color: var(--theme-color, #42b983);
   font-weight: 600;
 }
@@ -906,10 +906,18 @@ ul.tags {
 /***************************************************/
 /***************************************************/
 
-.sidebar-nav ul > p > strong {
+
+/*.misc-links {
+  position: absolute; 
+  bottom: 50px;
+  width: 98%;
+}*/
+
+.sidebar-nav > ul > li > strong,
+.misc-links strong {
   display: block;
-  border-style: solid;
-  border-color: red;
+  /*border-style: solid;*/
+  border-bottom: 1px solid rgba(0,0,0,0.07);
   color: black;
 }
 
