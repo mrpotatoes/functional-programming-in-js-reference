@@ -6,4 +6,4 @@ To fix the tags on the start page later.
 
 ---
 
-Get the sidebar to keep the link open? How? Please work!
+Would love if the sidebar collapse would work when deployed ...

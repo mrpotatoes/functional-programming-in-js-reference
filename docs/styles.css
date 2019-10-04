@@ -340,7 +340,6 @@ body.sticky .sidebar-toggle {
 .markdown-section table {
   border-collapse: collapse;
   border-spacing: 0;
-  /*display: block;*/
   margin-bottom: 1rem;
   overflow: auto;
   width: 100%;
@@ -906,6 +905,13 @@ ul.tags {
 /****************** Custom Sidebar *****************/
 /***************************************************/
 /***************************************************/
+
+.sidebar-nav ul > p > strong {
+  display: block;
+  border-style: solid;
+  border-color: red;
+  color: black;
+}
 
 .SideBarCollapse-ItemClosed {
   background-image: var(--sidebar-nav-pagelink-background-image);

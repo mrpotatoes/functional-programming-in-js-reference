@@ -17,10 +17,12 @@
       repo: 'https://github.com/mrpotatoes/functional-programming-in-js-reference',
       
       // Sidebar stuff
-      loadSidebar: true,
+      loadSidebar: 'sidebar.md',
+      auto2top   : true,
+
       // subMaxLevel: 1,
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/sidebar.md': '/sidebar.md',
       },
 
       // Plugin Settings
@@ -56,7 +58,6 @@
   <script src="//unpkg.com/docsify-edit-link@1"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
 
-  <!-- WHY WON'"'T YOU WORK YOU ASSHOLE! -->
   <script src="docsify-sidebar-collapse.js"></script>
 </body>
 </html>
