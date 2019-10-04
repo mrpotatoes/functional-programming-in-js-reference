@@ -17,14 +17,14 @@ let collapse_sidebar = function(hook, vm) {
 
       // Verifies if any child is opened
       const current_url = RegExp("#.*").exec(window.location.href);
-      // const query = ".sidebar-nav > ul > li:nth-child(" + index + ") > ul [href='" + current_url + "']"
-      const query = ".sidebar-nav [href='" + current_url + "']"
+      const query = ".sidebar-nav > ul > li:nth-child(" + index + ") > ul [href='" + current_url + "']"
+      // const query = ".sidebar-nav [href='" + current_url + "']"
       const is_opened = document.querySelector(query)
 
-      console.log(is_opened.innerText)
+      // console.log(is_opened.innerText)
 
       // Sets class for opened and closed items
-      if (!is_opened) {
+      if (is_opened) {
         children.style.display = "block";
         parent.className = 'SideBarCollapse-ItemOpened';
       } else {
