@@ -1,3 +1,9 @@
+* Start Here
+  * [Cheatsheet](start-here/cheatsheet.md)
+  * [Diagram](start-here/diagram.md)
+  * [How to read](start-here/how-to-read.md)
+  * [Todo](start-here/todo.md)
+
 * Foundational (0.5/94 complete)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
@@ -38,12 +44,13 @@
 * [Not Started] Cookbook
   * ...
 
-* [Not Started] Misc
-  * ...
+* Misc
+  * [Credits & Contributors](misc/credits-and-contributors.md)
 
-<!-- - **Links**
-- [Link 1](laws/transitivity.md)
-- [Link 1](laws/transitivity.md)
-- [Link 1](laws/transitivity.md)
-- [Link 1](laws/transitivity.md)
- -->
+<!--
+- **Links**
+  - [Link 1](laws/transitivity.md)
+  - [Link 1](laws/transitivity.md)
+  - [Link 1](laws/transitivity.md)
+  - [Link 1](laws/transitivity.md)
+-->

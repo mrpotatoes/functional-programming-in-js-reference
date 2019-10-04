@@ -1,12 +1,12 @@
 let collapse_sidebar = function(hook, vm) {
-  console.log('test 1')
+  // console.log('test 1')
   // Invoked each time after the data is fully loaded, no arguments
   hook.doneEach(function() {
-    console.log('test 2')
+    // console.log('test 2')
     let elems = document.querySelectorAll('.sidebar-nav > ul > li > p');
 
     for (var i = 0; i < elems.length; i++) {
-      console.log('test 3')
+      // console.log('test 3')
       let parent = elems[i];
 
       // Ignores if the element has a link
@@ -44,7 +44,7 @@ let collapse_sidebar = function(hook, vm) {
       // Adds click listener
       parent.addEventListener('click',
         function() {
-          console.log('test 4')
+          // console.log('test 4')
           if (parent.className === "SideBarCollapse-ItemClosed") {
             parent.className = 'SideBarCollapse-ItemOpened';
             children.style.display = "block";
@@ -58,5 +58,5 @@ let collapse_sidebar = function(hook, vm) {
   });
 }
 
-console.log('test 5')
+// console.log('test 5')
 window.$docsify.plugins = [].concat(collapse_sidebar, window.$docsify.plugins)
