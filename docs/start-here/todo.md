@@ -14,6 +14,8 @@ I want people to get eyes on this. Add to it and make it better. So make sure to
 - [ ] Should I add a Category Theory list of links to this Wiki?
 - [ ] Move the `sidemar.md` file to `_assets` or `config`
 - [ ] Learn to do the nested sidebar stuff.
+    - ala https://docsify.js.org/#/more-pages?id=nested-sidebars
+- Top level links in the sidebar should be bolded again
 
 ## Projects to apply learnings to
 - [ ]  `git-url`
