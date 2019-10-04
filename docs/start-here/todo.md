@@ -1,4 +1,5 @@
 # Todo
+- [ ] Fix collapse if a heading doesn't have children.
 - [ ] Definition of Done
 - [ ] Code in `computer-science-in-javascript` repo is moved to here
 - [ ] Laws are testable
