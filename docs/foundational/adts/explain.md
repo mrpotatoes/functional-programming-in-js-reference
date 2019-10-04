@@ -11,7 +11,7 @@ Essentialy the first way you'll see this is a `switch` statement. You could also
 
 # Quickstart
 ## Terms & Things
-###Product types
+### Product types
 Product types are simple and we're all used to them. From a definition standpoint they are called `product types` becase "they're analogous to cartesian products of sets. For instance `int` * `float` is the tuple `(int, float)`".
 
 So for instance this `Car` type is a `product`.
@@ -65,13 +65,12 @@ _SERIOUS BUSINESS_
 <hr />
 
 # More information
+[Functional Mumbo Jumbo - ADTs](http://blog.jenkster.com/2016/06/functional-mumbo-jumbo-adts.html)
 
 [Sum Types Are Coming: What You Should Know](https://chadaustin.me/2015/07/sum-types/)
   - Highly recommended read
   - Excellent theory
   - Goes into detail about sum types
-
-[Functional Mumbo Jumbo - ADTs](http://blog.jenkster.com/2016/06/functional-mumbo-jumbo-adts.html)
 
 [Null-tracking, or the difference between union and sum types](https://waleedkhan.name/blog/union-vs-sum-types/)
   - For theory.

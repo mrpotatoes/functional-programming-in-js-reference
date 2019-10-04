@@ -8,9 +8,12 @@ The code can be found in the repo under `./src`
 
 Note: Feel free to correct me if I'm wrong on anything. Either on twitter [@andriclibresinn](https://twitter.com/andriclibresinn) or put it into a `pull request`. 
 
-!> Change the URLs to be internal not to fantasyland. My pages can link to FL
+## Fantasyland cheetsheet
+!> I will add the Fantasyland diagram to the top soon(ish?)
 
-https://github.com/hemanth/functional-programming-jargon
+!> Just make everything in here linkable.
+
+<!-- https://github.com/hemanth/functional-programming-jargon -->
 
 <table>
 	<thead>
@@ -25,134 +28,234 @@ https://github.com/hemanth/functional-programming-jargon
 		<tr>
 			<th><a href="/#/foundational/setoid">Setoid</a></th>
 			<td></td>
-			<td>equals</td>
-			<td>reflexivity, symmetry, transitivity</td>
+			<td><code>equals</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/reflexivity" class="tag">reflexivity</a></li>
+					<li><a href="/#/laws/symmetry" class="tag">symmetry</a></li>
+					<li><a href="/#/laws/transitivity" class="tag">transitivity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/ord">Ord</a></th>
 			<td>Setoid</td>
-			<td>lte</td>
-			<td>totality, antisymmetry, transitivity</td>
+			<td><code>lte</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/totality" class="tag">totality</a></li>
+					<li><a href="/#/laws/antisymmetry" class="tag">antisymmetry</a></li>
+					<li><a href="/#/laws/transitivity" class="tag">transitivity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/semigroupoid">Semigroupoid</a></th>
 			<td></td>
-			<td>compose</td>
-			<td>associativity</td>
+			<td><code>compose</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/associativity" class="tag">associativity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/category">Category</a></th>
 			<td>Semigroupoid</td>
-			<td>id</td>
-			<td>left identity, right identity</td>
+			<td><code>id</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/left-identity" class="tag">left identity</a></li>
+					<li><a href="/#/laws/righty-identity" class="tag">right identity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/semigroup">Semigroup</a></th>
 			<td></td>
-			<td>concat</td>
-			<td>associativity</td>
+			<td><code>concat</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/associativity" class="tag">associativity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/monoid">Monoid</a></th>
 			<td>Semigroup</td>
-			<td>empty</td>
-			<td>left identity, right identity</td>
+			<td><code>empty</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/left-identity" class="tag">left identity</a></li>
+					<li><a href="/#/laws/righty-identity" class="tag">right identity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/functor">Functor</a></th>
 			<td></td>
-			<td>map</td>
-			<td>identity, composition</td>
+			<td><code>map</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/contravariant">Contravariant</a></th>
 			<td></td>
-			<td>contramap</td>
-			<td>identity, composition</td>
+			<td><code>contramap</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/apply">Apply</a></th>
 			<td>Functor</td>
-			<td>ap</td>
-			<td>composition</td>
+			<td><code>ap</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/applicative">Applicative</a></th>
 			<td>Apply</td>
-			<td>of</td>
-			<td>identity, homomorphism, interchange</td>
+			<td><code>of</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/homomorphism" class="tag">homomorphism</a></li>
+					<li><a href="/#/laws/interchange" class="tag">interchange</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/alt">Alt</a></th>
 			<td>Functor</td>
-			<td>alt</td>
-			<td>associativity, distributivity</td>
+			<td><code>alt</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/associativity" class="tag">associativity</a></li>
+					<li><a href="/#/laws/distributivity" class="tag">distributivity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/plus">Plus</a></th>
 			<td>Alt</td>
-			<td>zero</td>
-			<td>left identity, right identity, annihilation</td>
+			<td><code>zero</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/left-identity" class="tag">left identity</a></li>
+					<li><a href="/#/laws/righty-identity" class="tag">right identity</a></li>
+					<li><a href="/#/laws/annihilation" class="tag">annihilation</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/alternative">Alternative</a></th>
 			<td>Applicative, Plus</td>
 			<td></td>
-			<td>distributivity, annihilation</td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/distributivity" class="tag">distributivity</a></li>
+					<li><a href="/#/laws/annihilation" class="tag">annihilation</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/foldable">Foldable</a></th>
 			<td></td>
-			<td>reduce</td>
+			<td><code>reduce</code></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/traversable">Traversable</a></th>
 			<td>Functor, Foldable</td>
-			<td>traverse</td>
-			<td>naturality, identity, composition</td>
+			<td><code>traverse</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+					<li><a href="/#/laws/naturality" class="tag">naturality</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/chain">Chain</a></th>
 			<td>Apply</td>
-			<td>chain</td>
-			<td>associativity</td>
+			<td><code>chain</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/associativity" class="tag">associativity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/chainrec">ChainRec</a></th>
 			<td>Chain</td>
-			<td>chainRec</td>
-			<td>equivalence</td>
+			<td><code>chainRec</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/equivalence" class="tag">equivalence</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/monad">Monad</a></th>
 			<td>Applicative, Chain</td>
 			<td></td>
-			<td>left identity, right identity</td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/left-identity" class="tag">left identity</a></li>
+					<li><a href="/#/laws/righty-identity" class="tag">right identity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/extend">Extend</a></th>
 			<td>Functor</td>
-			<td>extend</td>
+			<td><code>extend</code></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/comonad">Comonad</a></th>
 			<td>Extend</td>
-			<td>extract</td>
-			<td>left identity, right identity</td>
+			<td><code>extract</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/left-identity" class="tag">left identity</a></li>
+					<li><a href="/#/laws/righty-identity" class="tag">right identity</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/bifunctor">Bifunctor</a></th>
 			<td>Functor</td>
-			<td>bimap</td>
-			<td>identity, composition</td>
+			<td><code>bimap</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th><a href="/#/foundational/profunctor">Profunctor</a></th>
 			<td>Functor</td>
-			<td>promap</td>
-			<td>identity, composition</td>
+			<td><code>promap</code></td>
+			<td>
+				<ul class="tags">
+					<li><a href="/#/laws/identity" class="tag">identity</a></li>
+					<li><a href="/#/laws/composition" class="tag">composition</a></li>
+				</ul>
+			</td>
 		</tr>
 	</tbody>
 </table>
