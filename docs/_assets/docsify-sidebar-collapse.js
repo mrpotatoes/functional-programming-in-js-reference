@@ -27,10 +27,10 @@ let collapse_sidebar = function(hook, vm) {
 
       // Sets class for opened and closed items
       if (is_opened) {
-        children.style.display = "block";
+        children.style.display = 'block';
         parent.className = 'SideBarCollapse-ItemOpened';
       } else {
-        children.style.display = "none";
+        children.style.display = 'none';
         parent.className = 'SideBarCollapse-ItemClosed';
       }
 

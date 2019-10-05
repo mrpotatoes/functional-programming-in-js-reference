@@ -1,6 +1,7 @@
 * Start Here
   * [Cheatsheet](start-here/cheatsheet.md)
   * [Diagram](start-here/diagram.md)
+  * [About Currying & Composition](start-here/currying-composition.md)
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
 
@@ -10,6 +11,8 @@
     * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
   * [Type Signatures](foundational/type-signatures/explain.md)
+    * [Fantasy Land Spec](foundational/type-signatures/fantasy-land.md)
+    * [Examples](foundational/type-signatures/examples.md)
   * [~Alt~](foundational/alt/explain.md)
     <!-- * [Code](foundational/alt/code.md) -->
   * [~Alternative~](foundational/alternative/explain.md)
@@ -73,10 +76,10 @@
   * [Totality](laws/totality.md)
   * [Transitivity](laws/transitivity.md)
 
-* Functions
+* Functions (0/20)
   * [~Explain~](functions/todo.md)
 
-* Advanced Topics (0%)
+* Advanced Topics (0/?)
   * ~Lens~
     * n/a
   * ~Transducers~

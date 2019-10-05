@@ -1,3 +1,5 @@
+# Type Signatures
+
 ## Example use case
 
     add :: Int -> Int -> Int
