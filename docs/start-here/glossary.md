@@ -30,4 +30,10 @@ Aliases:
 - Type Refinement
   - 
 
+`Product type`
+  - More like an array.
+
+`Record type`
+  - Something with a lable (JS Object)
+
 `Unit`: One. `void`, `null` et al are all `unit` types because there is only one possible value for it.
