@@ -2,11 +2,13 @@
   * [Cheatsheet](start-here/cheatsheet.md)
   * [Diagram](start-here/diagram.md)
   * [About Currying & Composition](start-here/currying-composition.md)
+  * [Glossary](start-here/glossary.md)
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
 
 * Algebras (0/73 complete)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
+    * [Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
     * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
