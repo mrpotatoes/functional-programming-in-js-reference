@@ -344,6 +344,12 @@ body.sticky .sidebar-toggle {
   overflow: auto;
   width: 100%;
 }
+
+.markdown-section thead {
+  background-color: #ccc;
+  color: #fff;
+}
+
 .markdown-section th {
   border: 1px solid #ddd;
   font-weight: bold;
@@ -678,25 +684,31 @@ body {
   color: var(--theme-color, #42b983);
   font-weight: 600;
 }
-.markdown-section h1 {
+.markdown-section h1, 
+.markdown-section h1 code {
   font-size: 2rem;
   margin: 0 0 1rem;
 }
-.markdown-section h2 {
+.markdown-section h2,
+.markdown-section h2 code {
   font-size: 1.75rem;
   margin: 45px 0 0.8rem;
 }
-.markdown-section h3 {
+.markdown-section h3,
+.markdown-section h3 code {
   font-size: 1.5rem;
   margin: 40px 0 0.6rem;
 }
-.markdown-section h4 {
+.markdown-section h4,
+.markdown-section h4 code {
   font-size: 1.25rem;
 }
-.markdown-section h5 {
+.markdown-section h5,
+.markdown-section h5 code{
   font-size: 1rem;
 }
-.markdown-section h6 {
+.markdown-section h6,
+.markdown-section h6 code{
   color: #777;
   font-size: 1rem;
 }
@@ -942,4 +954,12 @@ ul.tags {
   background-repeat: var(--sidebar-nav-pagelink-background-repeat);
   background-size: var(--sidebar-nav-pagelink-background-size);
   padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));*/
+}
+
+
+.katex {
+  font: normal 2em KaTeX_Main,Times New Roman,serif !important;
+  line-height: 1.2;
+  text-indent: 0;
+  text-rendering: auto;
 }
