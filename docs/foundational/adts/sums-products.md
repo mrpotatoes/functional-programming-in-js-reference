@@ -1,7 +1,5 @@
 # Sum & Product Types
 
-!> HEY MAN THIS IS PLAGERISM SO FIX THIS UP SO IT ISN'T. JEEZ!
-
 <!-- https://medium.com/@notgiorgi/algebraic-data-types-explained-in-statically-typed-javascript-4ad31c2b12c9
 
 This was something that threw me for awhile and I feel it's important to call it out so that everyone can understand. Whilst keeping the main article shorter ... -->
@@ -62,7 +60,6 @@ Okay, okay, okay, but how would that relate to my `Person` record above? I put i
 
 _**Note**: `GenderType` & `LocationType` are scalar because they can only have 1 value. `GenderType` or `LocationType` respectivly._
 
-
 <div style="text-align:center;">
   So the product for the person type is infinity!
 
@@ -75,7 +72,6 @@ _**Note**: `GenderType` & `LocationType` are scalar because they can only have 1
 | Symmetry | `a * b = b * a` |
 | Associativity | `a * (b * c) = (a * b) * c` |
 | Identity | `n * 1 = n` |
-
 
 ## Sum Types (OR)
 Sum types can be thought of as a datatype that can be one of a number of types (known as products) that have their own definition or shape. Each of these types has a `tag` that is used to identify the type in pattern matching.
@@ -97,7 +93,9 @@ The intersection (`∈A $\bigcap$ ∈B`) would be:
 
 In the case of sum types pattern matching is used to do the same thing as type refinement, and can also be used to handle a `null` or unexpected type case. Both solve similar issues of avoiding runtime errors with a type mismatch or an `undefined`/`null` value. -->
 
-# So why use `sum types` over `product types`?
+# So why use `sum types`?
+https://chadaustin.me/2015/07/sum-types/
+
 ## 1. `sum types` are polymorphic
 ## 2. Better handling of "similar" but "different" cases
 
