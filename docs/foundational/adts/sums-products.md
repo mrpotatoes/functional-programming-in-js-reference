@@ -34,7 +34,7 @@ const Person = new Object({
 That was good up until one part, maybe, and you'd say:
 > Wow, Andric, slow the fuck down. What does "cartesian product" mean?
 
-I'm so stoked you asked!, I have mentioned that Product Types are an `AND` operation and the reason for that is because they are defined as a `cartesian product` meaning that it is a product (multiplcation) of two sets. For this example we'll provide the product of set<sup>a</sup> A and B: $∈ A$ x $∈ B$
+I'm so stoked you asked!, I have mentioned that Product Types are an `AND` operation and the reason for that is because they are defined as a `cartesian product` meaning that it is a product (multiplcation) of two sets. For this example we'll provide the product of set<sup>a</sup> A and B: $∈ A$ \bigcup $∈ B$
 
 Given these two sets:
 <div style="text-align:center;">
@@ -44,7 +44,7 @@ Given these two sets:
 
 The product (`∈A x ∈B`) would be:
 <div style="text-align:center;">
-  $∈A \ \times ∈B = \{\ 1\alpha , 1\beta , 2\alpha , 2\beta , 3\alpha , 3\beta \ \}$
+  $∈A \ \bigcup ∈B = \{\ 1\alpha , 1\beta , 2\alpha , 2\beta , 3\alpha , 3\beta \ \}$
 </div>
 
 ?> The cartesian product, `A × B` is the set of all possible ordered pairs (`α, β`)<sup>4</sup>
@@ -86,9 +86,9 @@ Given the two sets:
   $∈ B = \{\ \alpha, \beta\ \}$
 </div>
 
-The product (`∈A x ∈B`) would be:
+The intersection (`∈A $\bigcap$ ∈B`) would be:
 <div style="text-align:center;">
-  $∈A \ \times ∈B = \{\ 1, 2, 3, \alpha, \beta \ \}$
+  $∈A \ \bigcap ∈B = \{\ 1, 2, 3, \alpha, \beta \ \}$
 </div>
 
 > “This overall operation is called disjoint union. Basically, it can be summarized as ‘a union, but each element remembers what set it came from’.” — Waleed Khan, Union vs Sum Types
@@ -116,7 +116,9 @@ Full definitions can be found in the [glossary](start-here/glossary)
 a. The mathematical notion for set is: $∈$ <br />
 b. `type refinement`: A way to refine a type in code for type saftey.
 c. `record`, `object` are the same thing. I use them interchangeably.<br />
-d. Any real number, or any quantity that can be measured using a single real number. `Temperature`, `length`, and `mass` are all scalars. A scalar is said to have magnitude but no direction.
+d. Any real number, or any quantity that can be measured using a single real number. `Temperature`, `length`, and `mass` are all scalars. A scalar is said to have magnitude but no direction.<br />
+e. $\bigcup$ means union<br />
+f. $\bigcap$ means intersection<br />
 
 #### ** More information **
 
