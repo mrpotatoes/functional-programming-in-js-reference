@@ -5,7 +5,7 @@
 This was something that threw me for awhile and I feel it's important to call it out so that everyone can understand. Whilst keeping the main article shorter ... -->
 
 ## Scalars
-In math a scalar<sup>d</sup> is anything that can be represented with a real number. In JS/Programming it's similar but rather we'd call any primative a scalar. Anything with an atomic value. `Number`, `null`, `string` `boolean` are all atomic scalars. 
+In math a scalar<sup>d</sup> is anything that can be represented with a real number. In JS/Programming it's similar but rather we'd call any primative a scalar. Anything with an atomic value. `Number`, `null`, `string` `boolean` are all atomic scalars.
 
 > Scalar type has an intrinsic size (a.k.a. cardinality), which is just the number of values inhabiting that type. <br />
 > The `Null` type has a size of 1 as it contains only one value, `null`.
@@ -16,7 +16,7 @@ In math a scalar<sup>d</sup> is anything that can be represented with a real num
 > \- Better JS Cases with Sum Types<sup>3</sup>
 
 ## Products of Sets (AND)
-`Product` means just what it means in math. Multiplication. Given this then `Products` of types represent a conjunction, an "`AND`,” of those types. In JavaScript you'll often see them as a record type<sup>c</sup> or better yet as an Object<sup>c</sup>. For instance a `Person` object is a cartesian product of the types of the types used to build the `Person` Object. 
+`Product` means just what it means in math. Multiplication. Given this then `Products` of types represent a conjunction, an "`AND`,” of those types. In JavaScript you'll often see them as a record type<sup>c</sup> or better yet as an Object<sup>c</sup>. For instance a `Person` object is a cartesian product of the types of the types used to build the `Person` Object.
 
 ```js
 const Person = new Object({
@@ -134,7 +134,7 @@ sum type Entity = Ghost | Character
 The possible values for `type Entity` is 5. The reason for that is the simple math. You do the math on the record as you would any product (2x2) and add that to the scalars.
 
 <div style="text-align:center;">
-  $ A \times (B \times B)$ 
+  $ A \times (B \times B)$
 </div>
 
 The article enumerates them and I'll copy it because it's important to see.
@@ -182,6 +182,8 @@ type Batter = Integer | Integer
 Batter = (Homeruns 13)
 Batter = (Age 33)
 ```
+
+?> For more information on `pattern matching` have a looksie at `daggy` or my custom implimentation of it to learn better how it works.
 
 <!-- A `union type` is a data structure that uses `type refinement`<sup>b</sup> to get defined types and depending on the language will fail to compile if you create an instance where an unexpected type is used.
 
@@ -256,15 +258,15 @@ const componentStates = TaggedSumLibrary({
 Better handling of "similar" but "different" cases
 
 > With the addition of a constructor tag, now every value comes with its own metadata identifier explaining just what the data’s case is
-> 
+>
 > Pattern matching is a language-supported syntax for doing two things at once: identifying which case a value represents, and extracting the data from such a value. It lets the user of a sum type easily, declaratively, and safely consume values in the type.
-> 
+>
 > \- Better JS Cases with Sum Types<sup>3</sup>
 
 
 <!-- tabs:start -->
 
-#### ** Bibliography **
+#### ** Citations **
 1. Whitlie, Ryan, _[Sum Types in JavaScript](https://dev.to/moosch/sum-types-in-javascript-15il)_, (2019)
 1. Bagdavadze, Giorgi, _[Algebraic Data Types explained in Statically typed Javascript](https://medium.com/@notgiorgi/algebraic-data-types-explained-in-statically-typed-javascript-4ad31c2b12c9)_, (2017)
 1. Lebec, Gabriel _[Better JS Cases with Sum Types](https://medium.com/fullstack-academy/better-js-cases-with-sum-types-92876e48fd9f)_, (2018)
@@ -281,10 +283,5 @@ c. `record`, `object` are the same thing. I use them interchangeably.<br />
 d. Any real number, or any quantity that can be measured using a single real number. `Temperature`, `length`, and `mass` are all scalars. A scalar is said to have magnitude but no direction.<br />
 e. $\bigcup$ means union<br />
 f. $\bigcap$ means intersection<br />
-
-#### ** More information **
-
-<!-- 1. [TITLE](LINK)
-  - Why link was used. -->
 
 <!-- tabs:end -->
