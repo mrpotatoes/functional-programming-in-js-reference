@@ -1,3 +1,9 @@
+# Source
+./src
+
+# Test files
+*test.*.*
+
 # Logs
 logs
 *.log
@@ -56,6 +62,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# compiled
-dist
