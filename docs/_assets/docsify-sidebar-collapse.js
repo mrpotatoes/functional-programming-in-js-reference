@@ -1,12 +1,12 @@
 let collapse_sidebar = function(hook, vm) {
-  // console.log('test 1')
   // Invoked each time after the data is fully loaded, no arguments
   hook.doneEach(function() {
-    // console.log('test 2')
-    let elems = document.querySelectorAll('.sidebar-nav > ul > li > p');
+    let elems = document.querySelectorAll('.sidebar .sidebar-nav > ul > li > p')
+    let url = '' + RegExp("#.*").exec(window.location.href)
+    let next = url.indexOf('?')
+    url = url.substring(0, next != -1 ? next : url.length)
 
     for (var i = 0; i < elems.length; i++) {
-      // console.log('test 3')
       let parent = elems[i];
 
       // Ignores if the element has a link
@@ -15,15 +15,11 @@ let collapse_sidebar = function(hook, vm) {
       }
 
       let index = i + 1;
-      let children = document.querySelector('.sidebar-nav > ul > li:nth-child(' + index + ') > ul');
+      let children = document.querySelector('.sidebar .sidebar-nav > ul > li:nth-child(' + index + ') > ul');
 
       // Verifies if any child is opened
-      const current_url = RegExp("#.*").exec(window.location.href);
-      const query = ".sidebar-nav > ul > li:nth-child(" + index + ") > ul [href='" + current_url + "']"
-      // const query = ".sidebar-nav [href='" + current_url + "']"
+      const query = ".sidebar .sidebar-nav > ul > li:nth-child(" + index + ") > ul [href='" + url + "']"
       const is_opened = document.querySelector(query)
-
-      // console.log(is_opened.innerText)
 
       // Sets class for opened and closed items
       if (is_opened) {
@@ -44,7 +40,6 @@ let collapse_sidebar = function(hook, vm) {
       // Adds click listener
       parent.addEventListener('click',
         function() {
-          // console.log('test 4')
           if (parent.className === "SideBarCollapse-ItemClosed") {
             parent.className = 'SideBarCollapse-ItemOpened';
             children.style.display = "block";
