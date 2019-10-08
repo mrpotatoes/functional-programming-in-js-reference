@@ -7,6 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="_assets/styles.css">
+  <link rel="stylesheet" href="_assets/toc.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
 </head>
 <body>
@@ -55,6 +56,10 @@
         tabComments: true,
         tabHeadings: true,
       },
+      'page-toc': {
+        tocMaxLevel: 3,
+        target: 'h1, h2, h3',
+      },
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -65,6 +70,7 @@
   <script src="//unpkg.com/docsify-edit-link@1"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="_assets/toc.js"></script>
   <script src="_assets/docsify-sidebar-collapse.js"></script>
 </body>
 </html>
