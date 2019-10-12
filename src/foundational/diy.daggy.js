@@ -1,24 +1,42 @@
 /* eslint-disable */
 const daggy = {}
 
+const argsToValues = args => Array.prototype.slice.call(arguments)
+
+const prototypePresentation = (typeName, values) => ({
+  toString() {
+    return `${typeName}(${values.toString()})`
+  },
+  inspect() {
+    return `${typeName}(${values.toString()})`
+  }
+})
+
+// const fields = (constructor, fields) => ()
+
 daggy.tagged = (typeName, fields) => {
   function constructor() {
     // Build out an object.
-    const values = Array.prototype.slice.call(arguments);
-    const proto = {
-      toString() {
-        return `${typeName}(${values.toString()})`
-      },
-      inspect() {
-        return `${typeName}(${values.toString()})`
-      }
-    }
+    const values = argsToValues(arguments)
+    const proto = prototypePresentation(typeName, values)
+
+    // Not 100% sure what this is. I don't play with prototypes often (if at all).
     proto.__proto__ = constructor.prototype
+
+    // This creates the class function we want (better than using 'new')
     const construct = Object.create(proto)
 
-    for (let i = 0; i < fields.length; i++) {
-      construct[fields[i]] = values[i]
-    }
+    // Add the fields.
+    // fields
+
+    // Do the fields stuff.
+    // for (let i = 0; i < fields.length; i++) {
+    //   construct[fields[i]] = values[i]
+    // }
+
+    console.log('andric', construct)
+    console.log('------')
+    // process.exit(1)
 
     return construct
   }
@@ -26,6 +44,7 @@ daggy.tagged = (typeName, fields) => {
   constructor.toString = () => typeName
 
   constructor.is = (val) => {
+    // console.log('value', val)
     const vs = val.toString()
     const index = vs.indexOf('(')
     const name = index >= 0 ? vs.slice(0, index) : vs

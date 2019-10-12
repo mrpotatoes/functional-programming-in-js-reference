@@ -20,10 +20,18 @@ describe('Level 1', () => {
   describe('Level 2', () => {
     it('Tagged elements', (done) => {
       const Point3D = diydaggy.tagged('Point3D', ['x', 'y', 'z'])
+      const Point3D2 = Point3D
 
       // Point3D.prototype.scale = (n) => (Point3D(this.x * n, this.y * n, this.z * n))
 
-      // console.log('asd')
+      var t = new Point3D
+      Point3D.is('asd')
+
+      console.log(Point3D)
+
+      // Point3D should be a type of Point3D
+      // Point3D2.is(Point3D).should.equal(true)
+      // Point3D.is(Point3D)
 
       // const b = a.scale(2)
       // const a = Point3D(1, 2, 3)

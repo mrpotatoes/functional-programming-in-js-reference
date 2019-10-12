@@ -16,6 +16,7 @@
     "prebuild": "rimraf dist",
     "build": "babel src --out-dir dist --ignore **/*.test.js",
     "test": "mocha --require @babel/register --recursive ./src --reporter mocha-clearscreen-reporter --watch",
+    "test2": "mocha --require @babel/register --recursive ./src --watch",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ./src"
   },
