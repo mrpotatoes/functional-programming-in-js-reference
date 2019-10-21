@@ -1,3 +1,19 @@
+// Fav so far: https://www.cssscript.com/demo/generating-a-table-of-contents-with-pure-javascript-toc/
+//    - Cleanest looking code
+//    - Doesn't work right out of the box
+//    - Needs some cleanup
+// https://hooshmand.net/quick-hack-add-a-dynamic-table-of-contents-to-a-ghost-blog/
+//    - Works right out of the box
+//    - Not an expression/isn't pure
+//    - Doesn't use Document.createElement()
+//    - Doens't handle the h1 case
+// https://stackoverflow.com/questions/43356176/parse-markdown-headings-to-generate-a-nested-list-in-javascript
+// t.ly/E35VB
+// t.ly/qvDWD
+// https://github.com/jgallen23/toc
+// http://loyc.net/2014/javascript-toc.html
+// https://codepen.io/lehollandaisvolant/pen/wJgGdR
+
 var defaultOptions = {
   tocMaxLevel: 3,
   target: 'h2, h3',
@@ -8,6 +24,7 @@ function pageToC(headings, path) {
   var list = [];
   var toc = ['<div class="page_toc">', '<p class="title">Contents</p>'];
   var headingSelector =  '.markdown-section ' + window.$docsify["page-toc"].target
+  console.log(headingSelector)
   headings = document.querySelectorAll(headingSelector);
 
   if (headings) {
