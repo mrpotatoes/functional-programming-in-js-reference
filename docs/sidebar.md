@@ -83,15 +83,11 @@
 
 * Advanced Topics (0/?)
   * ~Lens~
-    * n/a
   * ~Transducers~
-    * n/a
+  * ~Combinators~
   * ~Patterns~
-    * n/a
   * ~Evangelism~
-    * n/a
   * ~Cookbook~
-    * n/a
 
 * Cookbook
   * ~Patterns~
