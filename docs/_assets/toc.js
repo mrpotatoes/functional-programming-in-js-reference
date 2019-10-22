@@ -64,16 +64,19 @@ var tocHeading = function(Title) {
 	)
 }
 
-var setAttrs = function(overwrite, prefix) {
-  return function(src, target, index) {
-    var content = src.innerHTML;
+var aTag = function(src) {
+  var a = document.createElement('a');
+  var content = src.firstChild.innerHTML;
 
-    // Use this to clip text w/ HTML in it.
-    // https://github.com/arendjr/text-clipper
-    target.innerHTML = content;
-    target.href = src.firstChild.href;
-    target.setAttribute('class', 'anchor')
-  };
+  // Use this to clip text w/ HTML in it.
+  // https://github.com/arendjr/text-clipper
+  a.innerHTML = content;
+  a.href = src.firstChild.href;
+
+  // In order to remove this gotta fix the styles.
+  a.setAttribute('class', 'anchor');
+
+  return a
 };
 
 var buildTOC = function(options) {
@@ -83,10 +86,8 @@ var buildTOC = function(options) {
   var wrapper = ret;
   var lastLi = null;
 
-  var _setAttrs = setAttrs(options.overwrite, options.prefix);
-
-  getHeaders(selector, scope).reduce(function(prev, cur, index) {
-    var currentLevel = getLevel(cur.tagName);
+  getHeaders(selector, scope).reduce(function(prev, curr, index) {
+    var currentLevel = getLevel(curr.tagName);
     var offset = currentLevel - prev;
 
     if (offset > 0) {
@@ -100,11 +101,8 @@ var buildTOC = function(options) {
     wrapper = wrapper || ret;
 
     var li = document.createElement('li');
-    var a = document.createElement('a');
 
-    _setAttrs(cur, a, index);
-
-    wrapper.appendChild(li).appendChild(a);
+    wrapper.appendChild(li).appendChild(aTag(curr));
 
     lastLi = li;
 
@@ -166,24 +164,25 @@ function plugin(hook, vm) {
   });
 
   hook.doneEach(function () {
-    var nav = window.Docsify.dom.find(".nav");
+    var nav = document.querySelectorAll('.nav')[0]
 
     if (nav) {
     	const toc = initTOC({
 		    selector: 'h1, h2, h3, h4, h5, h6',
 		    scope: 'body',
 		    overwrite: false,
-		    prefix: 'toc'
+		    prefix: 'toc',
 			});
 
       // Just unset it for now.
       if (!toc.innerHTML) {
-        nav.innerHTML = ''
+        nav.innerHTML = null
         return;
       }
 
+      // Fix me in the future
 			var title = document.createElement('p');
-			title.innerHTML = 'Contents';
+			title.innerHTML = 'Table of Contents';
 			title.setAttribute('class', 'title');
 
 			var container = document.createElement('div');
