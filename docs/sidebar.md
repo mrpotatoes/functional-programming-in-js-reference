@@ -1,4 +1,4 @@
-* Start Here
+* [Start Here](start-here/cheatsheet.md)
   * [Cheatsheet](start-here/cheatsheet.md)
   * [Diagram](start-here/diagram.md)
   * [About Currying & Composition](start-here/currying-composition.md)
@@ -6,7 +6,7 @@
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
 
-* Algebras (0/73 complete)
+* [Algebras (0/73 complete)](foundational/index.md)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
@@ -60,7 +60,7 @@
   * [~Traversable~](foundational/traversable/explain.md)
     <!-- * [Code](foundational/traversable/code.md) -->
 
-* Laws (0/16 complete)
+* [Laws (0/16 complete)](laws/_index.md)
   * [Annihilation](laws/annihilation.md)
   * [Antisymmetry](laws/antisymmetry.md)
   * [Associativity](laws/associativity.md)
@@ -78,10 +78,10 @@
   * [Totality](laws/totality.md)
   * [Transitivity](laws/transitivity.md)
 
-* Functions (0/20)
+* [Functions (0/20)](functions/index.md)
   * [~Explain~](functions/todo.md)
 
-* Advanced Topics (0/?)
+* [Advanced Topics (0/?)](advanced/index.md)
   * ~Lens~
   * ~Transducers~
   * ~Combinators~
@@ -89,18 +89,21 @@
   * ~Evangelism~
   * ~Cookbook~
 
-* Cookbook
+* [Cookbook](cookbook/index.md)
   * ~Patterns~
   * ~Recursive fun~
   * ~CQRS/ES~
   * ~Handling state~
 
-* Example Projects
+* [Example Projects](example-projects/index.md)
   * ~Example 1~
   * ~Example 2~
   * ~Example 3~
 
-* Misc
+* [Evangelism](evangelism/index.md)
+  * [Credits & Contributors](misc/credits-and-contributors.md)
+
+* [Misc](misc/index.md)
   * [Credits & Contributors](misc/credits-and-contributors.md)
 
 <div class="misc-links">

@@ -1,5 +1,3 @@
-var log = console.log
-
 var defaultOptions = {
   selector: '.markdown-section h1, h2, h3, h4, h5, h6',
   scope: 'body',
@@ -19,6 +17,10 @@ var getHeaders = function(selector, scope) {
     var elems = elem.querySelectorAll(selector);
     ret = ret.concat(Array.prototype.slice.call(elems));
   });
+
+  if (ret.length <= 1) {
+    return []
+  }
 
   return ret;
 };
@@ -173,6 +175,12 @@ function plugin(hook, vm) {
 		    overwrite: false,
 		    prefix: 'toc'
 			});
+
+      // Just unset it for now.
+      if (!toc.innerHTML) {
+        nav.innerHTML = ''
+        return;
+      }
 
 			var title = document.createElement('p');
 			title.innerHTML = 'Contents';
