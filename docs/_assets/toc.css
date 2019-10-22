@@ -15,6 +15,7 @@
 aside.nav.nothing {
   width: 0;
 }
+
 .page_toc {
   position: fixed;
   border-left-style: solid;
@@ -22,8 +23,18 @@ aside.nav.nothing {
   border-left-color: rgba(0, 0, 0, 0.07);
   border-image-slice: 1;
   padding-left: 5px;
-
 }
+
+.page_toc code {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  color: #e96900;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-size: 0.8rem;
+  margin: 0 2px;
+  padding: 3px 5px;
+}
+
 .page_toc p.title {
   margin: 0px 0 0px 9px;
   padding-bottom: 5px;
