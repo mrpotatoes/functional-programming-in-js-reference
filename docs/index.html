@@ -56,9 +56,15 @@
         tabComments: true,
         tabHeadings: true,
       },
-      'page-toc': {
-        tocMaxLevel: 3,
-        target: 'h1, h2, h3',
+      toc: {
+        selector: '.markdown-section h1, h2, h3, h4, h5, h6',
+        scope: 'body',
+        overwrite: true,
+        prefix: 'toc',
+
+        // To make work
+        title: 'Table of Contents',
+        listType: 'ul',
       },
     }
   </script>

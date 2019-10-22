@@ -254,7 +254,7 @@ const componentStates = TaggedSumLibrary({
 })
 ```
 
-## Alleviates human errors when using polymorphic data
+## Alleviates `human` errors when `using` polymorphic data
 Better handling of "similar" but "different" cases
 
 > With the addition of a constructor tag, now every value comes with its own metadata identifier explaining just what the data’s case is

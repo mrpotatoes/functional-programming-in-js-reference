@@ -1,57 +1,156 @@
-// Fav so far: https://www.cssscript.com/demo/generating-a-table-of-contents-with-pure-javascript-toc/
-//    - Cleanest looking code
-//    - Doesn't work right out of the box
-//    - Needs some cleanup
-// https://hooshmand.net/quick-hack-add-a-dynamic-table-of-contents-to-a-ghost-blog/
-//    - Works right out of the box
-//    - Not an expression/isn't pure
-//    - Doesn't use Document.createElement()
-//    - Doens't handle the h1 case
-// https://stackoverflow.com/questions/43356176/parse-markdown-headings-to-generate-a-nested-list-in-javascript
-// t.ly/E35VB
-// t.ly/qvDWD
-// https://github.com/jgallen23/toc
-// http://loyc.net/2014/javascript-toc.html
-// https://codepen.io/lehollandaisvolant/pen/wJgGdR
+var log = console.log
 
 var defaultOptions = {
-  tocMaxLevel: 3,
-  target: 'h2, h3',
+  selector: '.markdown-section h1, h2, h3, h4, h5, h6',
+  scope: 'body',
+  overwrite: true,
+  prefix: 'toc',
+
+  // To make work
+  title: 'Table of Contents',
+  listType: 'ul',  
 }
 
-// To collect headings and then add to the page ToC
-function pageToC(headings, path) {
-  var list = [];
-  var toc = ['<div class="page_toc">', '<p class="title">Contents</p>'];
-  var headingSelector =  '.markdown-section ' + window.$docsify["page-toc"].target
-  console.log(headingSelector)
-  headings = document.querySelectorAll(headingSelector);
+var getHeaders = function(selector, scope) {
+  var ret = [];
+  var target = document.querySelectorAll(scope);
 
-  if (headings) {
-    headings.forEach(function (heading) {
-      var item = generateToC(heading.tagName.replace(/h/gi, ""), heading.innerHTML)
-      if (item) {
-        list.push(item)
-      }
-    });
+  Array.prototype.forEach.call(target, function(elem) {
+    var elems = elem.querySelectorAll(selector);
+    ret = ret.concat(Array.prototype.slice.call(elems));
+  });
+
+  return ret;
+};
+
+var getLevel = function(header) {
+  if (typeof header !== 'string') {
+    return 0;
   }
 
-  if (list.length > 0) {
-    toc = toc.concat(list);
-    toc.push("</div>");
-    return toc.join("");
-  } else {
-    return "";
+  var decs = header.match(/\d/g);
+  return decs ? Math.min.apply(null, decs) : 1;
+};
+
+var createList = function(wrapper, count) {
+  while (count--) {
+    wrapper = wrapper.appendChild(
+      document.createElement('ul')
+    );
+
+    if (count) {
+      wrapper = wrapper.appendChild(
+        document.createElement('li')
+      );
+    }
   }
+
+  return wrapper;
+};
+
+var jumpBack = function(currentWrapper, offset) {
+  while (offset--) {
+    currentWrapper = currentWrapper.parentElement;
+  }
+
+  return currentWrapper;
+};
+
+var tocHeading = function(Title) {
+  return document.createElement('h2').appendChild(
+  	document.createTextNode(Title)
+	)
 }
 
-// To generate each ToC item
-function generateToC(level, html) {
-  if (level > 0 && level <= window.$docsify["page-toc"].tocMaxLevel) {
-    return ['<div class="lv' + level + '">', html, "</div>"].join("");
+var setAttrs = function(overwrite, prefix) {
+  return function(src, target, index) {
+    var content = src.innerHTML;
+
+    // Use this to clip text w/ HTML in it.
+    // https://github.com/arendjr/text-clipper
+    target.innerHTML = content;
+    target.href = src.firstChild.href;
+    target.setAttribute('class', 'anchor')
+  };
+};
+
+var buildTOC = function(options) {
+  var selector = options.selector;
+  var scope = options.scope;
+  var ret = document.createElement('ul');
+  var wrapper = ret;
+  var lastLi = null;
+
+  var _setAttrs = setAttrs(options.overwrite, options.prefix);
+
+  getHeaders(selector, scope).reduce(function(prev, cur, index) {
+    var currentLevel = getLevel(cur.tagName);
+    var offset = currentLevel - prev;
+
+    if (offset > 0) {
+      wrapper = createList(lastLi, offset);
+    }
+
+    if (offset < 0) {
+      wrapper = jumpBack(wrapper, -offset * 2);
+    }
+
+    wrapper = wrapper || ret;
+
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+
+    _setAttrs(cur, a, index);
+
+    wrapper.appendChild(li).appendChild(a);
+
+    lastLi = li;
+
+    return currentLevel;
+  }, getLevel(selector));
+
+  return ret;
+};
+
+var initTOC = function(options) {
+  var defaultOpts = {
+    selector: '.markdown-section h1, h2, h3, h4, h5, h6',
+    scope: 'body',
+    overwrite: true,
+    prefix: 'toc',
+
+    // To make work
+    title: 'Table of Contents',
+    listType: 'ul',
+  };
+
+  // Do this better.
+  options = defaultOpts
+
+  // options = extendObj(defaultOpts, options);
+
+  var selector = options.selector;
+
+  if (typeof selector !== 'string') {
+    throw new TypeError('selector must be a string');
   }
-  return "";
-}
+
+  // This check shouldn't matter.
+  // if (!selector.match(/^(?:h[1-6],?\s*)+$/g)) {
+  //   throw new TypeError('selector must contains only h1-6');
+  // }
+
+  var currentHash = location.hash;
+
+  if (currentHash) {
+    setTimeout(function() {
+      var anchor = document.getElementById(currentHash.slice(1));
+      if (anchor) anchor.scrollIntoView();
+    }, 0);
+  }
+
+  return buildTOC(options);
+};
 
 // Docsify plugin functions
 function plugin(hook, vm) {
@@ -63,19 +162,33 @@ function plugin(hook, vm) {
       window.Docsify.dom.before(content, nav);
     }
   });
+
   hook.doneEach(function () {
     var nav = window.Docsify.dom.find(".nav");
+
     if (nav) {
-      nav.innerHTML = pageToC().trim();
-      if (nav.innerHTML == "") {
-        window.Docsify.dom.toggleClass(nav, "add", "nothing");
-      } else {
-        window.Docsify.dom.toggleClass(nav, "remove", "nothing");
-      }
+    	const toc = initTOC({
+		    selector: 'h1, h2, h3, h4, h5, h6',
+		    scope: 'body',
+		    overwrite: false,
+		    prefix: 'toc'
+			});
+
+			var title = document.createElement('p');
+			title.innerHTML = 'Contents';
+			title.setAttribute('class', 'title');
+
+			var container = document.createElement('div');
+			container.setAttribute('class', 'page_toc');
+			
+			container.appendChild(title);
+			container.appendChild(toc);
+
+      nav.innerHTML = container.outerHTML;
     }
   });
 }
 
 // Docsify plugin options
-window.$docsify["page-toc"] = Object.assign(defaultOptions, window.$docsify["page-toc"]);
+window.$docsify['toc'] = Object.assign(defaultOptions, window.$docsify['toc']);
 window.$docsify.plugins = [].concat(plugin, window.$docsify.plugins);

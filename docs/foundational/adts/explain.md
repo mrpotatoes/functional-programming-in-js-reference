@@ -59,7 +59,7 @@ const Car = {
 ```
 -->
 
-### Sum Types
+## Sum Types
 A `sum type` is a type that is exclusive-or. Meaning one **MUST** be true and the others **MUST** be false. Given the following Sum Type Only one can be true and the others are false. I'll defer to someone else's words to explain it better below but the following example shows it a little clearer.
 
 ```js
@@ -68,7 +68,7 @@ const PlayingCardSuit = {
 }
 ```
 
-### Abstract Data Type
+## Abstract Data Type
 > An algebraic data type is a kind of composite type, i.e., a type formed by combining other types - Wikipedia
 
 ## Plain Jane JS version
