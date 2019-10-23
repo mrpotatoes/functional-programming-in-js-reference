@@ -13,6 +13,7 @@
     "node": ">=8"
   },
   "scripts": {
+    "start": "docsify serve docs/",
     "prebuild": "rimraf dist",
     "build": "babel src --out-dir dist --ignore **/*.test.js",
     "test": "mocha --require @babel/register --recursive ./src --reporter mocha-clearscreen-reporter --watch",
