@@ -1,5 +1,5 @@
 var defaultOptions = {
-  selector: '.markdown-section h1, h2, h3, h4, h5, h6',
+  headings: 'h1, h2',
   scope: '.markdown-section',
 
   // To make work
@@ -7,71 +7,11 @@ var defaultOptions = {
   listType: 'ul',  
 }
 
-var tocClick = function(e) {
-  var divs = document.querySelectorAll('.page_toc .active');
-
-  // Remove the previous classes
-  [].forEach.call(divs, function(div) {
-    div.setAttribute('class', 'anchor')
-  });
-
-  // Make sure this is attached to the parent not itself
-  e.target.parentNode.setAttribute('class', 'active')
-};
-
-var getHeaders = function(selector, scope) {
-  var ret = [];
-  var target = document.querySelectorAll(scope);
-
-  Array.prototype.forEach.call(target, function(elem) {
-    var elems = elem.querySelectorAll(selector);
-    ret = ret.concat(Array.prototype.slice.call(elems));
-  });
-
-  if (ret.length <= 1) {
-    return []
-  }
-
-  return ret;
-};
-
-var getLevel = function(header) {
-  if (typeof header !== 'string') {
-    return 0;
-  }
-
-  var decs = header.match(/\d/g);
-  return decs ? Math.min.apply(null, decs) : 1;
-};
-
-var createList = function(wrapper, count) {
-  while (count--) {
-    wrapper = wrapper.appendChild(
-      document.createElement('ul')
-    );
-
-    if (count) {
-      wrapper = wrapper.appendChild(
-        document.createElement('li')
-      );
-    }
-  }
-
-  return wrapper;
-};
-
-var jumpBack = function(currentWrapper, offset) {
-  while (offset--) {
-    currentWrapper = currentWrapper.parentElement;
-  }
-
-  return currentWrapper;
-};
-
+// Element builders
 var tocHeading = function(Title) {
   return document.createElement('h2').appendChild(
-  	document.createTextNode(Title)
-	)
+    document.createTextNode(Title)
+  )
 }
 
 var aTag = function(src) {
@@ -90,24 +30,75 @@ var aTag = function(src) {
   return a
 };
 
+var tocClick = function(e) {
+  var divs = document.querySelectorAll('.page_toc .active');
+
+  // Remove the previous classes
+  [].forEach.call(divs, function(div) {
+    div.setAttribute('class', 'anchor')
+  });
+
+  // Make sure this is attached to the parent not itself
+  e.target.parentNode.setAttribute('class', 'active')
+};
+
+var createList = function(wrapper, count) {
+  while (count--) {
+    wrapper = wrapper.appendChild(
+      document.createElement('ul')
+    );
+
+    if (count) {
+      wrapper = wrapper.appendChild(
+        document.createElement('li')
+      );
+    }
+  }
+
+  return wrapper;
+};
+
+//------------------------------------------------------------------------
+
+var getHeaders = function(selector) {
+  var headings2 = document.querySelectorAll(selector);
+  var ret = [];
+
+  [].forEach.call(headings2, function(heading) {
+    ret = ret.concat(heading);
+  });
+
+  return ret;
+};
+
+var getLevel = function(header) {
+  var decs = header.match(/\d/g);
+
+  return decs ? Math.min.apply(null, decs) : 1;
+};
+
+var jumpBack = function(currentWrapper, offset) {
+  while (offset--) {
+    currentWrapper = currentWrapper.parentElement;
+  }
+
+  return currentWrapper;
+};
+
 var buildTOC = function(options) {
-  var selector = options.selector;
-  var scope = options.scope;
   var ret = document.createElement('ul');
   var wrapper = ret;
   var lastLi = null;
+  var selector = options.scope + ' ' + options.headings
+  var headers = getHeaders(selector)
 
-  getHeaders(selector, scope).reduce(function(prev, curr, index) {
+  headers.reduce(function(prev, curr, index) {
     var currentLevel = getLevel(curr.tagName);
     var offset = currentLevel - prev;
 
-    if (offset > 0) {
-      wrapper = createList(lastLi, offset);
-    }
-
-    if (offset < 0) {
-      wrapper = jumpBack(wrapper, -offset * 2);
-    }
+    wrapper = (offset > 0)
+      ? createList(lastLi, offset)
+      : jumpBack(wrapper, -offset * 2)
 
     wrapper = wrapper || ret;
 
@@ -118,28 +109,9 @@ var buildTOC = function(options) {
     lastLi = li;
 
     return currentLevel;
-  }, getLevel(selector));
+  }, getLevel(options.headings));
 
   return ret;
-};
-
-var initTOC = function(options) {
-  console.log(options)
-
-  if (typeof options.selector !== 'string') {
-    throw new TypeError('selector must be a string');
-  }
-
-  var currentHash = location.hash;
-
-  if (currentHash) {
-    setTimeout(function() {
-      var anchor = document.getElementById(currentHash.slice(1));
-      if (anchor) anchor.scrollIntoView();
-    }, 0);
-  }
-
-  return buildTOC(options);
 };
 
 // Docsify plugin functions
@@ -163,7 +135,7 @@ function plugin(hook, vm) {
       return;
     }
 
-  	const toc = initTOC(userOptions);
+  	const toc = buildTOC(userOptions);
 
     // Just unset it for now.
     if (!toc.innerHTML) {
