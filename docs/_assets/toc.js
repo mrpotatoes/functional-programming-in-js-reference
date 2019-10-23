@@ -76,6 +76,12 @@ var aTag = function(src) {
   // In order to remove this gotta fix the styles.
   a.setAttribute('class', 'anchor');
 
+  a.onclick = function(e) {
+    // Unset the other "active class"
+    // Set MYSELF to active.
+    console.log(e.target.href)
+  }
+
   return a
 };
 
@@ -125,20 +131,13 @@ var initTOC = function(options) {
   };
 
   // Do this better.
-  options = defaultOpts
-
-  // options = extendObj(defaultOpts, options);
+  options = defaultOpts;
 
   var selector = options.selector;
 
   if (typeof selector !== 'string') {
     throw new TypeError('selector must be a string');
   }
-
-  // This check shouldn't matter.
-  // if (!selector.match(/^(?:h[1-6],?\s*)+$/g)) {
-  //   throw new TypeError('selector must contains only h1-6');
-  // }
 
   var currentHash = location.hash;
 
@@ -165,34 +164,44 @@ function plugin(hook, vm) {
 
   hook.doneEach(function () {
     var nav = document.querySelectorAll('.nav')[0]
+    var t = Array.from(document.querySelectorAll('.nav'))
 
-    if (nav) {
-    	const toc = initTOC({
-		    selector: 'h1, h2, h3, h4, h5, h6',
-		    scope: 'body',
-		    overwrite: false,
-		    prefix: 'toc',
-			});
-
-      // Just unset it for now.
-      if (!toc.innerHTML) {
-        nav.innerHTML = null
-        return;
-      }
-
-      // Fix me in the future
-			var title = document.createElement('p');
-			title.innerHTML = 'Table of Contents';
-			title.setAttribute('class', 'title');
-
-			var container = document.createElement('div');
-			container.setAttribute('class', 'page_toc');
-			
-			container.appendChild(title);
-			container.appendChild(toc);
-
-      nav.innerHTML = container.outerHTML;
+    if (!nav) {
+      return;
     }
+
+  	const toc = initTOC({
+	    selector: 'h1, h2, h3, h4, h5, h6',
+	    scope: 'body',
+	    overwrite: false,
+	    prefix: 'toc',
+		});
+
+    // Just unset it for now.
+    if (!toc.innerHTML) {
+      nav.innerHTML = null
+      return;
+    }
+
+    // Fix me in the future
+		var title = document.createElement('p');
+		title.innerHTML = 'Table of Contents';
+		title.setAttribute('class', 'title');
+
+		var container = document.createElement('div');
+		container.setAttribute('class', 'page_toc');
+		
+		container.appendChild(title);
+		container.appendChild(toc);
+
+    // Existing TOC
+    var tocChild = document.querySelectorAll('.nav .page_toc');
+
+    if (tocChild.length > 0) {
+      tocChild[0].parentNode.removeChild(tocChild[0]);
+    }
+
+    nav.appendChild(container);
   });
 }
 
