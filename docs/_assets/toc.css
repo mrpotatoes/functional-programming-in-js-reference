@@ -96,3 +96,9 @@ aside.nav.nothing {
     margin: 0 auto;
   }
 }
+
+.page_toc .active {
+  border-left: 5px solid;
+  color: var(--theme-color, #42b983);
+  padding-left: 10px;
+}

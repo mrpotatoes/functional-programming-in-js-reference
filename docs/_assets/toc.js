@@ -1,13 +1,23 @@
 var defaultOptions = {
   selector: '.markdown-section h1, h2, h3, h4, h5, h6',
-  scope: 'body',
-  overwrite: true,
-  prefix: 'toc',
+  scope: '.markdown-section',
 
   // To make work
-  title: 'Table of Contents',
+  title: 'Contents',
   listType: 'ul',  
 }
+
+var tocClick = function(e) {
+  var divs = document.querySelectorAll('.page_toc .active');
+
+  // Remove the previous classes
+  [].forEach.call(divs, function(div) {
+    div.setAttribute('class', 'anchor')
+  });
+
+  // Make sure this is attached to the parent not itself
+  e.target.parentNode.setAttribute('class', 'active')
+};
 
 var getHeaders = function(selector, scope) {
   var ret = [];
@@ -72,15 +82,10 @@ var aTag = function(src) {
   // https://github.com/arendjr/text-clipper
   a.innerHTML = content;
   a.href = src.firstChild.href;
+  a.onclick = tocClick
 
   // In order to remove this gotta fix the styles.
   a.setAttribute('class', 'anchor');
-
-  a.onclick = function(e) {
-    // Unset the other "active class"
-    // Set MYSELF to active.
-    console.log(e.target.href)
-  }
 
   return a
 };
@@ -119,23 +124,9 @@ var buildTOC = function(options) {
 };
 
 var initTOC = function(options) {
-  var defaultOpts = {
-    selector: '.markdown-section h1, h2, h3, h4, h5, h6',
-    scope: 'body',
-    overwrite: true,
-    prefix: 'toc',
+  console.log(options)
 
-    // To make work
-    title: 'Table of Contents',
-    listType: 'ul',
-  };
-
-  // Do this better.
-  options = defaultOpts;
-
-  var selector = options.selector;
-
-  if (typeof selector !== 'string') {
+  if (typeof options.selector !== 'string') {
     throw new TypeError('selector must be a string');
   }
 
@@ -153,6 +144,8 @@ var initTOC = function(options) {
 
 // Docsify plugin functions
 function plugin(hook, vm) {
+  var userOptions = vm.config.toc;
+
   hook.mounted(function () {
     var content = window.Docsify.dom.find(".content");
     if (content) {
@@ -170,12 +163,7 @@ function plugin(hook, vm) {
       return;
     }
 
-  	const toc = initTOC({
-	    selector: 'h1, h2, h3, h4, h5, h6',
-	    scope: 'body',
-	    overwrite: false,
-	    prefix: 'toc',
-		});
+  	const toc = initTOC(userOptions);
 
     // Just unset it for now.
     if (!toc.innerHTML) {
@@ -185,7 +173,7 @@ function plugin(hook, vm) {
 
     // Fix me in the future
 		var title = document.createElement('p');
-		title.innerHTML = 'Table of Contents';
+		title.innerHTML = userOptions.title;
 		title.setAttribute('class', 'title');
 
 		var container = document.createElement('div');
