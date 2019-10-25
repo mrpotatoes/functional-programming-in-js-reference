@@ -1,6 +1,7 @@
 * [Start Here](start-here/cheatsheet.md)
   * [Cheatsheet](start-here/cheatsheet.md)
   * [Diagram](start-here/diagram.md)
+  * [Style over Functional](start-here/style-over-functional.md)
   * [About Currying & Composition](start-here/currying-composition.md)
   * [Glossary](start-here/glossary.md)
   * [How to read](start-here/how-to-read.md)
@@ -82,12 +83,14 @@
   * [~Explain~](functions/todo.md)
 
 * [Advanced Topics (0/?)](advanced/index.md)
+  * (These could be their own top level items)
   * ~Lens~
   * ~Transducers~
   * ~Combinators~
   * ~Patterns~
   * ~Evangelism~
   * ~Cookbook~
+  * ~Streaming / RxJS~
 
 * [Cookbook](cookbook/index.md)
   * ~Patterns~
