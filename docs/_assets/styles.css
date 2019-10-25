@@ -646,7 +646,8 @@ body {
   font-size: 18px;
 }
 
-.sidebar ul li a {
+.sidebar ul li a,
+.sidebar ul li p {
   color: #505d6b;
   font-size: 16px;
   font-weight: normal;
@@ -655,6 +656,13 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.sidebar ul li del {
+  color: #505d6b;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .sidebar ul li a:hover {
   text-decoration: underline;
 }

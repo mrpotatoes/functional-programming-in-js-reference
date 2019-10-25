@@ -12,6 +12,7 @@
   
   <!-- Because the injected styles weren't working so I'm going to give this a shot -->
   <link rel="stylesheet" href="//unpkg.com/docsify-sidebar-collapse@1.1.2/src/style.css"/>
+  <link rel="stylesheet" href="//unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css"/>
 </head>
 <body>
   <div id="app"></div>
@@ -65,33 +66,6 @@
         headings: 'h1, h2, h3, h4, h5, h6',
         title: 'Table of Contents',
       },
-      // plugins: [
-      //   function(hook, vm) {
-      //     hook.doneEach(function() {
-      //       document.querySelectorAll(".sidebar-nav > ul > li").forEach(
-      //         function(node) {
-      //           var span = document.createElement("span");
-      //           span.innerHTML = node.firstChild.data;
-      //           span.style.cursor = "pointer";
-      //           span.onclick = function(event) {
-      //             var ul = event.target.nextElementSibling;
-      //             if (ul.style.display === "none") {
-      //               ul.style.display = "block";
-      //             } else {
-      //               ul.style.display = "none";
-      //             }
-      //           };
-      //           node.firstChild.replaceWith(span);
-      //           node.lastChild.style.display = "none";
-      //       });
-
-      //       var active = document.querySelector(".sidebar-nav li.active");
-      //       if (active) {
-      //         active.parentElement.style.display = "block";
-      //       }
-      //     });
-      //   }
-      // ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -103,7 +77,7 @@
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script src="//unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
   <script src="_assets/collapse.js"></script>
-  <!-- <script src="//unpkg.com/docsify-sidebar-collapse@1.1.2/dist/docsify-sidebar-collapse.js"> -->
 </body>
 </html>

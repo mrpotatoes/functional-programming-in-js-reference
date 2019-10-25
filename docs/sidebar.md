@@ -112,6 +112,7 @@
 
 * [Misc](misc/index.md)
   * [Credits & Contributors](misc/credits-and-contributors.md)
+  * ~Libraries~
 
 <div class="misc-links">
 
