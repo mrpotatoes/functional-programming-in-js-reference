@@ -940,22 +940,6 @@ ul.tags {
   color: black;
 }
 
-.SideBarCollapse-ItemClosed {
-  background-image: var(--sidebar-nav-pagelink-background-image);
-  background-position: var(--sidebar-nav-pagelink-background-position);
-  background-repeat: var(--sidebar-nav-pagelink-background-repeat);
-  background-size: var(--sidebar-nav-pagelink-background-size);
-  padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
-}
-
-.SideBarCollapse-ItemOpened {
-  /*background-image: var(--sidebar-nav-pagelink-background-image--active, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
-  background-position: var(--sidebar-nav-pagelink-background-position);
-  background-repeat: var(--sidebar-nav-pagelink-background-repeat);
-  background-size: var(--sidebar-nav-pagelink-background-size);
-  padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));*/
-}
-
 .katex {
   font: normal 2em KaTeX_Main,Times New Roman,serif !important;
   line-height: 1.2;
@@ -967,26 +951,4 @@ details {
   padding: 20px;
   background-color: #ededed;
   margin-bottom: 20px;
-}
-
-.part-1 {
-  background-color: #e5f7ef;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.part-1 details {
-  background-color: #22a2c9;
-}
-
-.part-2 {
-  background-color: lightgrey;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.part-2 details {
-  background-color: lightgrey;
 }

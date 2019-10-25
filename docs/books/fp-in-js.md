@@ -10,13 +10,10 @@ June 2016  ISBN 9781617292828  272 pages
 
 _I'm going through this book on my own. Want to become better at this._
 
-<div class="part-1">
-
-# PART 1: THINK FUNCTIONALLY
-## 1. BECOMING FUNCTIONAL
 <details>
-  <summary>Chapter 1</summary>
+  <summary>PART 1: THINK FUNCTIONALLY</summary>
 
+## 1. BECOMING FUNCTIONAL
 - 1.1. Can learning functional programming help?
 - 1.2. What is functional programming?
 	- 1.2.1. Declarative programming
@@ -29,12 +26,7 @@ _I'm going through this book on my own. Want to become better at this._
 	- 1.3.3. Reacting to the complexity of asynchronous applications
 - 1.4. Summary
 
-</details>
-
 ## 2. HIGH-ORDER JAVASCRIPT
-<details>
-  <summary>Chapter 2</summary>
-
 - 2.1. Why JavaScript?
 - 2.2. Functional versus object-oriented programming
 	- 2.2.1. Managing the state through encapsulation
@@ -54,15 +46,11 @@ _I'm going through this book on my own. Want to become better at this._
 - 2.5. Summary
 
 </details>
-</div>
 
-<div class="part-2">
-
-# PART 2: GET FUNCTIONAL
-## 3. FEW DATA STRUCTURES, MANY OPERATIONS
 <details>
-  <summary>Chapter 3</summary>
+  <summary>PART 2: GET FUNCTIONAL</summary>
 
+## 3. FEW DATA STRUCTURES, MANY OPERATIONS
 - 3.1. Understanding your application's control flow
 - 3.2. Method chaining
 - 3.3. Function chaining
@@ -79,12 +67,7 @@ _I'm going through this book on my own. Want to become better at this._
 	- 3.5.3. Recursively defined data structures
 - 3.6. Summary
 
-</details>
-
 ## 4. TOWARDS MODULAR, REUSABLE CODE
-<details>
-  <summary>Chapter 4</summary>
-
 - 4.1. Method chains versus function pipelines
 	- 4.1.1. Chaining methods together
 	- 4.1.2. Arranging functions in a pipeline
@@ -111,12 +94,7 @@ _I'm going through this book on my own. Want to become better at this._
 	- 4.6.5. Fork (join) combinator
 - 4.7. Summary
 
-</details>
-
 ## 5. DESIGN PATTERNS AGAINST COMPLEXITY
-<details>
-  <summary>Chapter 5</summary>
-
 - 5.1. Shortfalls of imperative error handling
 	- 5.1.1. Error handling with try-catch
 	- 5.1.2. Reasons not to throw exceptions in functional programs
@@ -132,14 +110,12 @@ _I'm going through this book on my own. Want to become better at this._
 - 5.5. Summary
 
 </details>
-</div>
 
-# PART 3: ENHANCING YOUR FUNCTIONAL SKILLS
-## 6. BULLETPROOF YOUR CODE
 
 <details>
-  <summary>Chapter 6</summary>
+  <summary>PART 3: ENHANCING YOUR FUNCTIONAL SKILLS</summary>
 
+## 6. BULLETPROOF YOUR CODE
 - 6.1. Functional programming's influence on unit tests
 - 6.2. Challenges of testing imperative programs
 	- 6.2.1. Difficulty identifying and decomposing tasks
@@ -156,13 +132,7 @@ _I'm going through this book on my own. Want to become better at this._
 	- 6.5.2. Measuring the complexity of functional code
 - 6.6. Summary
 
-</details>
-
-
 ## 7. FUNCTIONAL OPTIMIZATIONS
-<details>
-  <summary>Chapter 1</summary>
-
 - 7.1. Under the hood of function execution
 	- 7.1.1. Currying and the function context stack
 	- 7.1.2. Challenges of recursive code
@@ -179,13 +149,7 @@ _I'm going through this book on my own. Want to become better at this._
 	- 7.4.1. Converting non-tail calls to tail calls
 - 7.5. Summary
 
-</details>
-
-
 ## 8. MANAGING ASYNCHRONOUS EVENTS AND DATA
-<details>
-  <summary>Chapter 1</summary>
-
 - 8.1. Challenges of asynchronous code
 	- 8.1.1. Creating temporal dependencies amongst functions
 	- 8.1.2. Falling into a callback pyramid
@@ -203,16 +167,16 @@ _I'm going through this book on my own. Want to become better at this._
 - 8.5. Summary
 
 </details>
-
-# APPENDIX
+ 
 <details>
-  <summary>Chapter 1</summary>
+  <summary>APPENDIX</summary>
 
-- A.1 Functional JavaScript libraries
+## A.1 Functional JavaScript libraries
 	- A.1.1 Lodash
 	- A.1.2 Ramda
 	- A.1.3 RxJS
-- A.2 Other libraries used
+
+##  A.2 Other libraries used
 	- A.2.1 Log4JS
 	- A.2.2 QUnit
 	- A.2.3 Sinon

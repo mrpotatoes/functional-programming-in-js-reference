@@ -106,6 +106,10 @@
 * [Evangelism](evangelism/index.md)
   * [Credits & Contributors](misc/credits-and-contributors.md)
 
+* [Books](books/index.md)
+  * [by Luis Atencio](books/fp-in-js.md)
+  * [by P. Daniels & L. Atencio](books/rxjs-in-action.md)
+
 * [Misc](misc/index.md)
   * [Credits & Contributors](misc/credits-and-contributors.md)
 
