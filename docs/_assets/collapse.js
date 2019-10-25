@@ -3,7 +3,6 @@
   typeof define === 'function' && define.amd ? define(factory) :
   (factory());
 }(this, (function () { 'use strict';
-  console.log('Andric');
   $docsify.plugins = [function (hook, vm) {
     hook.doneEach(function (html, next) {
       var el = document.querySelector('.sidebar-nav .active');
