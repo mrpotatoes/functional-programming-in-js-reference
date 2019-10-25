@@ -1,3 +1,4 @@
+# Functional Programming in JavaScript
 ![](https://images.manning.com/720/960/resize/book/5/c5bd123-f4fd-4a03-9069-9309c782ea7e/Atencio_hires_Fc.png)
 
 [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript) <br />
