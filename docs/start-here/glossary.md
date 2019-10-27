@@ -88,9 +88,19 @@
 	  }
 	}
 
+	function glossaryUrl(url) {
+		var json = url.indexOf('.io') > 1
+			? 'https://mrpotatoes.github.io/functional-programming-in-js-reference/start-here/glossary.json'
+			: 'http://localhost:3000/start-here/glossary.json'
+
+		return json;
+	}
+
 	function loadJSON(callback) {
 	  var request = new XMLHttpRequest();
-		request.open('GET', '/start-here/glossary.json', true);
+		request.open('GET', 
+			glossaryUrl(window.location.href),
+			true);
 
 		request.onload = function() {
 		  if (request.status >= 200 && request.status < 400) {
