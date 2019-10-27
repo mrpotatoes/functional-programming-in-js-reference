@@ -9,9 +9,8 @@
 
 * [Algebras (0/73 complete)](foundational/index.md)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
-    * [Sum, Products, etc.](foundational/adts/sums-products.md)
+    * [[Theory] Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
-    * [Maths](foundational/adts/maths.md)
     * [Code](foundational/adts/code.md)
   * [Type Signatures](foundational/type-signatures/explain.md)
     * [Fantasy Land Spec](foundational/type-signatures/fantasy-land.md)

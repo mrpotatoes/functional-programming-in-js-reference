@@ -345,6 +345,10 @@ body.sticky .sidebar-toggle {
   width: 100%;
 }
 
+.markdown-section #data-table td {
+  color: #403f3f;
+}
+
 .markdown-section thead {
   background-color: #ccc;
   color: #fff;

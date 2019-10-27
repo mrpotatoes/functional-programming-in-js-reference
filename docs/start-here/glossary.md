@@ -1,39 +1,120 @@
 # Glossary
 
-`Disjunction`: A disjunction is a compound statement formed by joining two statements with the connector OR. The disjunction "p or q" is symbolized by `p ˅ q`. A disjunction is false if and only if both statements are false; otherwise it is true. The truth values of `p ˅ q` are listed in the truth table below.
-  - https://www.mathgoodies.com/lessons/vol9/disjunction
-  - https://www.dictionary.com/browse/disjunction
+<script>
+	function tags(tags, cell) {
+		for (var tag of tags) {
+			var span = document.createElement('span')
+			var tagText = document.createTextNode(tag)
+			span.appendChild(tagText)
+			span.setAttribute('class', 'tag')
+			cell.appendChild(span)
+		}
+	}
 
-`type refinement`
-  - ## Type Refinement
-You can think of `type refinement` as a process where you always make sure you have only specific branches that handle your type information. Wether this is handled by your code, a static type checker or transpilation, type refinement makes your code type safe and overall safer to run.
+	function links(hrefs, cell) {
+		for (var href of hrefs) {
+			var span = document.createElement('span')
+			var a = document.createElement('a')
+			var hrefText = document.createTextNode(href)
+			span.style.display = 'block'
+			a.href = href
+			a.appendChild(hrefText)
+			span.appendChild(a)
+			cell.appendChild(span)
+		}
+	}
 
-`Pattern Matching`
+	function filterGlossary(glossary, heading, filter) {
 
-`Tagged Union`
+	}
 
-`Discriminated Union`
-- http://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions
+	function sortGlossary(glossary, heading) {
+		glossary.sort(function (a, b) {
+		  if (a[heading] > b[heading]) {
+        return 1;
+	    }
+	    
+	    if (b[heading] > a[heading]) {
+	    	return -1;
+	    }
 
-`Union Type`
+	    return 0;
+		})
+	}
 
-`Sum Type`
-Aliases: 
-* `tagged union`
-* `variant`
-* `variant record`
-* `choice type`
-* `discriminated union`
-* `disjoint union`
-* `coproduct`
+	// Working with plain document.* in javascript is tedious. So this ain't gonna be efficent.
+	function tableize(data) {
+		// 0. Set some variables.
+		var headings = ['Term', 'Definition', 'Aliases', 'References']
 
-- Type Refinement
-  - 
+		// 1. Sort data by term name.
+		sortGlossary(data, 'term')
 
-`Product type`
-  - More like an array.
+		// 2. Get the table DOM Object.
+		var table = document.getElementById('data-table');
+		var thead = table.createTHead();
+  	var row = thead.insertRow();
 
-`Record type`
-  - Something with a lable (JS Object)
+  	// 3. Create the headings for the table.
+  	for (var key of headings) {
+	    var th = document.createElement('th')
+	    th.appendChild(document.createTextNode(key))
+	    row.appendChild(th)
+	  }
 
-`Unit`: One. `void`, `null` et al are all `unit` types because there is only one possible value for it.
+	  // 4. Now do the same with the data tho.
+	  for (var element of data) {
+	    var row = table.insertRow();
+
+	    // 4a. Term
+	    var cell = row.insertCell();
+      var text = document.createTextNode(element.term);
+      cell.appendChild(text);
+
+      // 4b. Definition text.
+      var cell = row.insertCell();
+      var text = document.createTextNode(element.definition || '');
+      cell.appendChild(text);
+
+      // 4c. Aliases array.
+      var cell = row.insertCell();
+      var aliases = element.aliases || []
+      tags(aliases, cell)
+      
+      // 4d. References array.
+      var cell = row.insertCell();
+      var refs = element.references || []
+      links(refs, cell)
+	  }
+	}
+
+	function loadJSON(callback) {
+	  var request = new XMLHttpRequest();
+		request.open('GET', '/start-here/glossary.json', true);
+
+		request.onload = function() {
+		  if (request.status >= 200 && request.status < 400) {
+		    callback(JSON.parse(request.response))
+		  } else {
+		    // We reached our target server, but it returned an error
+		  }
+		};
+
+		request.onerror = function() {
+		  console.log('errored')
+		};
+
+		request.send();
+	}
+
+	// How to actually add the table is here.
+	loadJSON(function(response) {
+		tableize(response)
+	})
+</script>
+
+<!-- Aliases should use the tag -->
+
+<table id="data-table">
+<!-- here goes our data! -->
+</table>
