@@ -73,8 +73,10 @@
 
       // 4b. Definition text.
       var cell = row.insertCell();
-      var text = document.createTextNode(element.definition || '');
-      cell.appendChild(text);
+      var def = document.createElement('span')
+      def.innerHTML = marked(element.definition || '')
+      // var text = document.createTextNode(element.definition || '');
+      cell.appendChild(def);
 
       // 4c. Aliases array.
       var cell = row.insertCell();
