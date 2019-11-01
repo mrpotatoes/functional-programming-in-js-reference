@@ -3,6 +3,7 @@
   * [Diagram](start-here/diagram.md)
   * [Style over Functional](start-here/style-over-functional.md)
   * [About Currying & Composition](start-here/currying-composition.md)
+  * [On state & mutation](start-here/state-bad.md)
   * [Glossary](start-here/glossary.md)
   * [How to read](start-here/how-to-read.md)
   * [Todo](start-here/todo.md)
