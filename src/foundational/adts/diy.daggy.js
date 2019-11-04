@@ -7,6 +7,7 @@ const prototypePresentation = (typeName, values) => ({
   toString() {
     return `${typeName}(${values.toString()})`
   },
+
   inspect() {
     return `${typeName}(${values.toString()})`
   }
