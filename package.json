@@ -13,13 +13,18 @@
     "node": ">=8"
   },
   "scripts": {
-    "start": "docsify serve docs/",
-    "prebuild": "rimraf dist",
     "build": "babel src --out-dir dist --ignore **/*.test.js",
-    "test": "mocha --require @babel/register --recursive ./src --reporter mocha-clearscreen-reporter --watch",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ./src",
-    "test:genscripts": "nodemon ./other/generate-scripts.js"
+    "prebuild": "rimraf dist",
+    "start": "docsify serve docs/",
+    "test": "mocha --require @babel/register --recursive ./src --reporter mocha-clearscreen-reporter --watch",
+    "test:foundational": "mocha --require @babel/register --recursive ./src/foundational --reporter mocha-clearscreen-reporter --watch",
+    "test:genscripts": "node ./other/generate-scripts.js",
+    "test:laws": "mocha --require @babel/register --recursive ./src/laws --reporter mocha-clearscreen-reporter --watch",
+    "test:lens": "mocha --require @babel/register --recursive ./src/lens --reporter mocha-clearscreen-reporter --watch",
+    "test:patterns": "mocha --require @babel/register --recursive ./src/patterns --reporter mocha-clearscreen-reporter --watch",
+    "test:transducers": "mocha --require @babel/register --recursive ./src/transducers --reporter mocha-clearscreen-reporter --watch"
   },
   "dependencies": {
     "chai": "^4.2.0",
