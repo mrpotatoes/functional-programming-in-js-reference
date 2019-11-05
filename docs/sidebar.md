@@ -43,7 +43,8 @@
   * [~Functor~](foundational/functor/explain.md)
     <!-- * [Code](foundational/functor/code.md) -->
   * [~Monad~](foundational/monad/explain.md)
-    <!-- * [Code](foundational/monad/code.md) -->
+    * [~Code~](foundational/monad/code.md)
+    * [~Types~](foundational/monad/types.md)
   * [~Monoid~](foundational/monoid/explain.md)
     <!-- * [Code](foundational/monoid/code.md) -->
   * [~Ord~](foundational/ord/explain.md)

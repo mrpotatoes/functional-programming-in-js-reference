@@ -218,7 +218,7 @@ switch (tag) {
 }
 ```
 
-In most languages this would break if we directly accessed properties on either event but since they are tagged you're good to go.
+In most languages this would break if we directly accessed properties on either event but since they are tagged you're good to go. Now, remember, JavaScript doesn't have an in-language support for tagging to make it safe (or at least I am not aware that it can be done currently in ES6+).
 
 ## They are general
 A great example is the `Maybe` type. It allows for safe management of `null` values. Or the `Either` type that allows for safe use of code that throws `exception`s. Quick example:
