@@ -1,22 +1,8 @@
-# functional-programming-in-js-reference
+# [Functional Programming in JS Reference](https://mrpotatoes.github.io/functional-programming-in-js-reference/)
 
-https://mrpotatoes.github.io/functional-programming-in-js-reference/
+This is the github repo for the site AND the source code that is showed on the site.
 
-To fix the tags on the start page later.
-
----
-
-Would love if the sidebar collapse would work when deployed ...
-
-* https://typelevel.org/cats/typeclasses/applicative.html
-
-* https://eslint.org/docs/6.0.0/developer-guide/shareable-configs
-* https://github.com/jonaskello/eslint-plugin-functional
-* https://github.com/jfmengels/eslint-plugin-fp
-
-* https://github.com/javve/list.js
-* https://listjs.com/docs/plugins/pagination/
-* https://listjs.com/docs/plugins/fuzzysearch/
+I recommend going to the site if you want to learn more about functional programming (head is link) otherwise if you want to look at the source goto the `./src` folder.
 
 <!-- 
   http://bilby.brianmckenna.org/#taggedsumconstructors
@@ -34,12 +20,12 @@ Would love if the sidebar collapse would work when deployed ...
 
 -->
 
-These two projects will allow for easier to add embeddable code. Perhaps it's worth forking and working on it?
+<!-- These two projects will allow for easier to add embeddable code. Perhaps it's worth forking and working on it?
 * https://github.com/finom/github-embed/tree/gh-pages/
 * https://github.com/finom/github-embed/tree/master
 
 Until I can confirm that is a working idea I will do this:
-* https://www.onlinetool.io/gitoembed/
+* https://www.onlinetool.io/gitoembed/ -->
 
 <!-- https://codepen.io/brenden/pen/Kwbpyj (JQUERY)
 https://tympanus.net/codrops/2013/03/29/nested-accordion/
