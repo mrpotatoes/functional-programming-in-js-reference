@@ -4,6 +4,10 @@ This is the github repo for the site AND the source code that is showed on the s
 
 I recommend going to the site if you want to learn more about functional programming (head is link) otherwise if you want to look at the source goto the `./src` folder.
 
+
+![](./docs/_assets/example-logo.jpg)
+\- Credit NYT
+
 <!-- 
   http://bilby.brianmckenna.org/#taggedsumconstructors
   
