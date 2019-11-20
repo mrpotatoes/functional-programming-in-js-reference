@@ -9,6 +9,9 @@ I recommend going to the site if you want to learn more about functional program
 \- Credit NYT
 
 <!-- 
+  https://github.com/ramda/ramda-fantasy/tree/master/src
+    - Reference for the ADTs
+
   http://bilby.brianmckenna.org/#taggedsumconstructors
   
   https://github.com/jimf/fp-cheetsheet
