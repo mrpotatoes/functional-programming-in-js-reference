@@ -5,7 +5,7 @@
 
 ?> Examples in here are linked to code in this repo.
 
-If you've completed the [`[Theory] Sub, Products, etc.`](foundational/adts/sums-products) you'll understand some of the math that goes into creating a `Tagged Union`. There are types that a matcher can handle. That's really all it is. There are so many more benefits to it though.
+If you've completed the [`[Theory] Sub, Products, etc.`](foundational/adts/sums-products) you'll understand some of the math that goes into creating a `Tagged Union`. There are types that a matcher can handle. That's really all it is. There are so many more benefits to it though.<sup>mi-2</sup?
 
 Anyhow, having gone through the exercise of teaching myself some very basic `set theory` and learning what a sum type (tagged sum) is I've have serious difficulty in how to build or use them. This is what this article is about.
 
@@ -92,7 +92,7 @@ const commentEditorStates = {
 ```
 <!-- tabs:end -->
 
-?> Honestly if you're the type of person that thinks the `switch` is better and more readable then you're a nonsense person.
+?> Honestly if you're the type of person that thinks the `switch` is better and more readable then you're a nonsense person. I'm sorry you had to hear it from me.
 
 There is, unfortunately, more benefit to using the `switch` instead of the `object` literal in this case because of the default case (which you can handle if you wrote a better mechanism for it like: https://tinyurl.com/qpc6r2c).
 
@@ -178,11 +178,19 @@ https://dev.to/avalander/union-types-with-javascript-4emo
 #### ** Bibliography **
 
 1. Avalander, _[Union Types with Javascript](https://dev.to/avalander/union-types-with-javascript-4emo)_, (2018)
+1. Learning Journal, _[Scala Tutoraial - Pattern Matching](https://www.youtube.com/watch?v=ULcpWn23waw)_, (2017)
+1. Functional Programming Principles in Scala, _[4.7 Pattern Matching](https://www.youtube.com/watch?v=osd0SZ9he4Q)_, (2017)
 
-#### ** More information **
+#### ** More information / Notes **
 
 1. [[Theory] Sub, Products, etc.](foundational/adts/sums-products)
   - Explains sum types
+1. JavaScript makes tagged sums difficult to understand after learning what they are in theory.
+
+One of the things that JavaScript makes difficult to understand because when you look at different libraries that handle this they typically use a simple key like the name of the function to determine types. This isn't super powerful. TypeScript, I believe, would make this much more powerful. If you look at languages that have this built in you'll see that they handle it by actual types which is what we should be doing. Short of that it should be known that there are options and figuring out types is one option.
+  - Capturing primative type, function/object type, params (recursivly), source file from which the type originates, mashing it together to make a hash as a key is an option
+    - Could make code slow so this would be a pre-compile time optimization like most of TypeScript (as I understand it).
+  - Use the function name plus argument count
 
 <!-- tabs:end -->
 
