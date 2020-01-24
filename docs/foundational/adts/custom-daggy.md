@@ -185,12 +185,11 @@ https://dev.to/avalander/union-types-with-javascript-4emo
 
 1. [[Theory] Sub, Products, etc.](foundational/adts/sums-products)
   - Explains sum types
-1. JavaScript makes tagged sums difficult to understand after learning what they are in theory.
-
-One of the things that JavaScript makes difficult to understand because when you look at different libraries that handle this they typically use a simple key like the name of the function to determine types. This isn't super powerful. TypeScript, I believe, would make this much more powerful. If you look at languages that have this built in you'll see that they handle it by actual types which is what we should be doing. Short of that it should be known that there are options and figuring out types is one option.
+1. JavaScript makes tagged sums difficult to understand after learning what they are in theory. It basically comes down to the plain JS type system. One of the things that JavaScript makes difficult to understand because when you look at different libraries that handle this they typically use a simple key like the name of the function to determine types. This isn't super powerful. TypeScript, I believe, would make this much more powerful. If you look at languages that have this built in you'll see that they handle it by actual types which is what we should be doing. Short of that it should be known that there are options and figuring out types is one option.
   - Capturing primative type, function/object type, params (recursivly), source file from which the type originates, mashing it together to make a hash as a key is an option
     - Could make code slow so this would be a pre-compile time optimization like most of TypeScript (as I understand it).
   - Use the function name plus argument count
+  - Write a babel plugin that saves all this information as metadata associated with every function. The complexity here would really not be worth it.
 
 <!-- tabs:end -->
 
