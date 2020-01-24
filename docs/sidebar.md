@@ -12,7 +12,6 @@
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [[Theory] Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Custom Daggy](foundational/adts/custom-daggy.md)
-    * [Code](foundational/adts/code.md)
   * [Type Signatures](foundational/type-signatures/explain.md)
     * [Fantasy Land Spec](foundational/type-signatures/fantasy-land.md)
     * [Examples](foundational/type-signatures/examples.md)
@@ -55,7 +54,7 @@
     <!-- * [Code](foundational/profunctor/code.md) -->
   * [~Semigroup~](foundational/semigroup/explain.md)
     <!-- * [Code](foundational/semigroup/code.md) -->
-  * [Se~migroupoid~](foundational/semigroupoid/explain.md)
+  * [~Semigroupoid~](foundational/semigroupoid/explain.md)
       <!-- * [Code](foundational/semigroupoid/code.md) -->
   * [~Setoid~](foundational/setoid/explain.md)
     <!-- * [Code](foundational/setoid/code.md) -->

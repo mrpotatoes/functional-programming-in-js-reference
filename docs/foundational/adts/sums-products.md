@@ -183,8 +183,6 @@ Batter = (Homeruns 13)
 Batter = (Age 33)
 ```
 
-?> For more information on `pattern matching` have a looksie at `daggy` or my custom implimentation of it to learn better how it works.
-
 <!-- A `union type` is a data structure that uses `type refinement`<sup>b</sup> to get defined types and depending on the language will fail to compile if you create an instance where an unexpected type is used.
 
 In the case of sum types pattern matching is used to do the same thing as type refinement, and can also be used to handle a `null` or unexpected type case. Both solve similar issues of avoiding runtime errors with a type mismatch or an `undefined`/`null` value. -->

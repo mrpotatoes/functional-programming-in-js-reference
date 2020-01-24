@@ -50,4 +50,7 @@ https://www.w3schools.com/howto/howto_js_treeview.asp
 https://www.w3.org/TR/wai-aria-practices/examples/treeview/treeview-2/treeview-2b.html
 https://www.cssscript.com/create-a-simple-tree-view-using-vanilla-javascript-js-treeview/
 http://www.zzee.com/solutions/collapsible-menu-tree.html
+
+
+https://unifiedjs.com/explore/package/remark-bibliography/
  -->
