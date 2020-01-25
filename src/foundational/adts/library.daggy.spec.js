@@ -4,64 +4,57 @@ import daggy from 'daggy'
 
 chai.should()
 
-//- A coordinate in 3D space.
-//+ Coord :: (Int, Int, Int) -> Coord
-const Coord = daggy.tagged('Coord', ['x', 'y', 'z'])
+const Maybe = daggy.taggedSum('Maybe', {
+  Just: ['x'],
+  Nothing: [],
+})
 
-//- A line between two coordinates.
-//+ Line :: (Coord, Coord) -> Line
-const Line = daggy.tagged('Line', ['from', 'to'])
+const { Just } = Maybe
 
-// We can add methods w/named properties.
-Coord.prototype.translate = (x, y, z) => function (x, y, z) {
-  return Coord(
-    this.x + x,
-    this.y + y,
-    this.z + z
-  )
+Maybe.of = (d) => d ? Maybe.Just(d) : Maybe.Nothing
+
+Maybe.prototype.map = function (f) {
+  return this.cata({
+    Just: x => Maybe.Just(f(x)),
+    Nothing: () => Maybe.Nothing,
+  })
 }
 
 describe('daggy.js', () => {
-  describe('daggy.tagged()', () => {
-    it('................................................................', (done) => {
-
-      done()
+  describe('Maybe.of(data)', () => {
+    it('Contained data is what is expected', () => {
+      const data = Maybe.of('data')
+      expect(data.x).to.equal('data')
     })
   })
 
-  describe('daggy.taggedSum()', () => {
-    it('................................................................', (done) => {
-      const Shape = daggy.taggedSum('Shape', {
-        // Square :: (Coord, Coord) -> Shape
-        Square: ['topleft', 'bottomright'],
-
-        // Circle :: (Coord, Number) -> Shape
-        Circle: ['centre', 'radius']
+  describe('Maybe.of(null)', () => {
+    describe('Maybe.of(null)', () => {
+      it('Container is empty', () => {
+        const data = Maybe.of(null)
+        expect(data.is(Maybe.Nothing)).to.equal(true)
       })
+    })
 
-      Shape.prototype.translate = function (x, y, z) {
-        return this.cata({
-          Square: (topleft, bottomright) =>
-            Shape.Square(
-              topleft.translate(x, y, z),
-              bottomright.translate(x, y, z)
-            ),
+    describe('Maybe.of(undefined)', () => {
+      it('Container is empty', () => {
+        const data = Maybe.of(undefined)
+        expect(data.is(Maybe.Nothing)).to.equal(true)
+      })
+    })
 
-          Circle: (centre, radius) =>
-            Shape.Circle(
-              centre.translate(x, y, z),
-              radius
-            )
-        })
-      }
+    describe('Maybe.of(false)', () => {
+      it('Container is empty', () => {
+        const data = Maybe.of(false)
+        expect(data.is(Maybe.Nothing)).to.equal(true)
+      })
+    })
 
-      // Square(Coord(5, 5, 3), Coord(6, 6, 3))
-      Shape.Square(Coord(2, 2, 0), Coord(3, 3, 0)).translate(3, 3, 3)
-
-      // Circle(Coord(7, 7, 7), 8)
-      Shape.Circle(Coord(1, 2, 3), 8).translate(6, 5, 4)
-
-      done()
+    describe('Maybe.of(\'\')', () => {
+      it('Container is empty', () => {
+        const data = Maybe.of('')
+        expect(data.is(Maybe.Nothing)).to.equal(true)
+      })
     })
   })
 })

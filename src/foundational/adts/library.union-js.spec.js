@@ -1,5 +1,5 @@
 import chai, { expect } from 'chai'
-const Union = require('tagged-union')
+import Union from 'tagged-union'
 
 chai.should()
 
