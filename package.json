@@ -31,7 +31,8 @@
     "daggy": "^1.4.0",
     "mocha": "^6.2.1",
     "mocha-clearscreen-reporter": "^1.0.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "tagged-union": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
