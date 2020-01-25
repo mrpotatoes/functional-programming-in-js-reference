@@ -283,10 +283,6 @@ There are just things that JavaScript (at least currently) cannot handle. One of
 * Pattern matching provides redundancy checking which catches errors.<sup>b-6</sup>
 * Nested and/or parallel pattern matches are optimized for you by the F# compiler. The OO equivalent must be written by hand and constantly reoptimized by hand during development, which is prohibitively tedious and error prone so production-quality OO code tends to be extremely slow in comparison.<sup>b-6</sup>
 
-<!-- [github-embed](https://github.com/mrpotatoes/functional-programming-in-js-reference/blob/d1462fff545bb7e0c0ae834981a9dddfc444893f/src/foundational/adts/diy.daggy.spec.js ':lang=js') -->
-
-<!-- https://dev.to/avalander/union-types-with-javascript-4emo -->
-
 <!-- tabs:start -->
 
 #### ** Bibliography **
