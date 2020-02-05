@@ -1,6 +1,9 @@
 # Sum type Code
 
-?> A sum type is based on the structure of the types.
+A sum type is based on the structure of the types.
+
+?> The code examples showing off this information is foind in the [tests](https://github.com/mrpotatoes/functional-programming-in-js-reference/tree/master/src/foundational/adts)
+
 
 If you've completed the [`[Theory] Sub, Products, etc.`](foundational/adts/sums-products) you'll understand some of the math that goes into creating a `Tagged Union`. There are types that a matcher can handle. That's really all it is. There are so many more benefits to it though<sup>mi-2</sup>.
 
