@@ -1,5 +1,8 @@
 * [Start Here](start-here/cheatsheet.md)
   * [How to read](start-here/how-to-read.md)
+  * [Type Signatures](foundational/type-signatures/explain.md)
+    * [Fantasy Land Spec](foundational/type-signatures/fantasy-land.md)
+    * [Examples](foundational/type-signatures/examples.md)
   * [Cheat sheet](start-here/cheatsheet.md)
   * [Diagram](start-here/diagram.md)
   * [Style over Functional](start-here/style-over-functional.md)
@@ -13,9 +16,6 @@
     * [[Theory] Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Pattern Matching](foundational/adts/pattern-matching.md)
     * [Discriminated Unions](foundational/adts/discriminated-unions.md)
-  * [Type Signatures](foundational/type-signatures/explain.md)
-    * [Fantasy Land Spec](foundational/type-signatures/fantasy-land.md)
-    * [Examples](foundational/type-signatures/examples.md)
   * [~Alt~](foundational/alt/explain.md)
     <!-- * [Code](foundational/alt/code.md) -->
   * [~Alternative~](foundational/alternative/explain.md)
