@@ -25,6 +25,7 @@ These are the same two functions (with some poor interfaces/types attached to on
 
 Damas-Hindley-Milner signatures are just a different, and imo more readable, way to write a type signature. I would even go so far as to say it's the definitive way to write type signatures. Many call this the "arrow notation" and I kind of like it. I definitely do not like having to always say or type "Damas-Hindley-Milner type signatures". Maybe DHMTS. Maybe. "Type signature" is just easier honestly. And if anyone wants to know more about them or "arrow notation" then just point them in my direction 😊!
 
+<div class="breaker">
 Bear with me a moment while I go on a [related] tangent.
 
 Consider a function just a mapping of values of one domain to another. Meaning that if you give it a particular set of inputs you ALWAYS get the same outputs from the co-domain. So, for instance, if I were to pass the `add()` function `1` and `2` I would ALWAYS get `3`. If I got anything other than `3` then the function would be broken. You could consider this for all possible combinations of 2 integers.
@@ -40,6 +41,7 @@ But why is this at all important?
 Essentially because when people don't look at a function's signature as a definition of that function/type but rather what goes in and hopefully comes out and then look at the doc block header or the contents of the function. There are many ... _side effects_ ... that have lead up to that behavior but one of them is that the function signature doesn't always mean what it says. Some functions throw exceptions (yuck), some functions don't return (yuck), some functions do "extra" (yuck) and therefore you can't _trust_ a function. Typically.
 
 Type signatures on the other hand means that you can and you should.
+</div>
 
 ### What do type signatures do?
 * Describe the type
