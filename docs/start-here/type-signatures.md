@@ -18,7 +18,7 @@ const usersWithOutLast = async (users: User[]): Promise<User[]>
 const usersWithOutLast = async (users)
 ```
 
-These are the same two functions (with some poor interfaces/types attached to one of them). This is a function called `usersWithOutLast` that takes and array of `User` objects and eventually returns a `User` array but the user don't have a "`last`". Killer. This is straight forward and powerful and expressive, tho I'"'d argue difficult to read no matter how much I'm used to it.
+These are the same two functions (with some poor interfaces/types attached to one of them). This is a function called `usersWithOutLast` that takes and array of `User` objects and eventually returns a `User` array but the user don't have a "`last`". Killer. This is straight forward and powerful and expressive, tho I'd argue difficult to read no matter how much I'm used to it.
 
 ## New World
 **Please welcome Damas-Hindley-Milner type signatures!**
@@ -48,7 +48,7 @@ Type signatures on the other hand means that you can and you should.
 * Allow for automated testing
 * In a perfect JS world we'd have type inferance 😭
 
-### What do type don't signatures do?
+### What don't type signatures do?
 * Don't explain the inner workings of a function
 * Don't describe the exact values you'll get
     * Think strings. You won't know that the `greet` function prepends `"Hello, "` to your input.
