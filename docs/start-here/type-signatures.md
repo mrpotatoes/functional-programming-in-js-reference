@@ -30,7 +30,7 @@ Bear with me a moment while I go on a [related] tangent.
 
 Consider a function just a mapping of values of one domain to another. Meaning that if you give it a particular set of inputs you ALWAYS get the same outputs from the co-domain. So, for instance, if I were to pass the `add()` function `1` and `2` I would ALWAYS get `3`. If I got anything other than `3` then the function would be broken. You could consider this for all possible combinations of 2 integers.
 
-![asd](https://via.placeholder.com/750x450)
+![](/./domain.jpg)
 
 This brings up some interesting ideas too. If you've ever used a `jest` snapshot it'll create a file on the system of the output of that JSX. This wouldn't be possible if you give that function/JSX the same inputs and the output is always different. This is the same exact thing with functions. They are just mapping from one to another. The domain to the co-domain.
 
@@ -56,8 +56,6 @@ Type signatures on the other hand means that you can and you should.
     * Think strings. You won't know that the `greet` function prepends `"Hello, "` to your input.
 
 ### Mapping
-!> Note: This should be in one of my glossary pages as well.
-
 Firstly let's do some preliminary mapping. A table. YAY!
 
 | Symbol | Definition | Example | Thoughts |
@@ -66,8 +64,8 @@ Firstly let's do some preliminary mapping. A table. YAY!
 | `->` | maps to, returns, yields | The function will return "this" | `inc :: a -> a` |
 | `=>` | type constraints | `...` | |
 | `~>` | method "maps to" | `...` | |
-| `TypeClass`<sup>1</sup> | A named type constructor | `inc :: ComplexNumer n => n -> n -> n` |
-| `a` | [type variable or generic variable](https://youtu.be/BtFdmg8uhNY?t=3171) | `...` | |
+| `TypeClass`<sup>1</sup> | A named type constructor | `inc :: ComplexNumer n => n -> n -> n` | Also check the second footnote<sup>3</sup> |
+| `a` | [type variable or generic variable](https://youtu.be/BtFdmg8uhNY?t=3171) | `...` |
 | `()` | No params, no return| `main :: () -> ()` |  |
 
 A fun little note: <br />
@@ -130,7 +128,7 @@ These next symbols are all related in one way or another and it makes most sense
 _Lowercase letters stand for type variables._
 1. Type variables can take any type unless they have been restricted by means of type constraints (see fat arrow below).
 
-?> `TypeClass` unofficial and not part of `FantasyLand` but it makes it easier for me to understand.
+?> `TypeClass` unofficial and not part of `FantasyLand` but it makes it easier for me to understand. Check the first footnote in "More information"
 
 Think of `TypeClass` as an identifier of the set that the variable (next section) is required to be. All of this `type`'s methods are required in order to satisfy the type signature.
 
@@ -189,6 +187,29 @@ const example {
 
 <details>
   <summary>
+    <b><code>fantasy-land/traverse :: Applicative f, Traversable t => t a ~> (TypeRep f, a -> f b) -> f (t b)</code></b>
+    <br /><br />
+    This is a reformatted example from the <a href="https://github.com/fantasyland/fantasy-land">Fantasy Land Spec</a>
+  </summary>
+<br />
+
+| Icongraphy | Explained |
+|-----|---|
+| `fantasy-land/traverse` | Method name, it's called `traverse` |
+| `::` | Is a member of |
+|  `Applicative f, Traversable t` | Type constraints.  |
+|  `=>` | Constraight type  |
+|  `t a` | Method target type |
+| `~>` | `a` is a method on `m` |
+| `(TypeRep f, a -> f b)` | argument types |
+| `f (t b)` | The return type, it's a function of subtype `f` that takes `(t b)` |
+
+</details>
+
+<!-- ---------------------------------------------------------------- -->
+
+<details>
+  <summary>
     <b><code>fantasy-land/chain :: Chain m => m a ~> (a -> m b) -> m b</code></b>
   </summary>
 <br />
@@ -197,7 +218,7 @@ const example {
   |-----|---|
   | `fantasy-land/chain` | Is the function. It's called `chain` |
   | `::` | Is a member of |
-  |  `Chain m` | On an object of some subtype of `Chain` generically referenced as `m`.<br /><br /> This is the `Typeclass` portion I mentioned above.  |
+  |  `Chain m` | On an object of some subtype of `Chain` generically referenced as `m`<sup>1</sup>.<br /><br /> This is the `Typeclass` portion I mentioned above.  |
   |  `m a` | That type `m` boxes some other type `a` |
   | `~>` | `a` is a method on `m` |
   | `(a -> m b)` | Takes an function from the boxed type `a` to another instance of the same container type `m` with boxed type `b`<sup>2</sup> |
@@ -205,7 +226,9 @@ const example {
 
 </details>
 
-<details>
+<!-- ---------------------------------------------------------------- -->
+
+<!-- <details>
   <summary>
     <i>(unfinished)</i><b><code>fantasy-land/id :: Category c => () -> c a a</code></b>
   </summary>
@@ -216,11 +239,13 @@ const example {
   1.  →
   1.  →
   1.  →
-</details>
+</details> -->
 
-<details>
+<!-- ---------------------------------------------------------------- -->
+
+<!-- <details>
   <summary>
-    <i>(unfinished)</i><b><code>fantasy-land/compose :: Semigroupoid c => c i j ~> c j k -> c i k</code></b>
+    <i>(unfinished)</i><b><code>................................</code></b>
   </summary>
 
   1. `fantasy-land/chain` →
@@ -229,7 +254,7 @@ const example {
   1.  →
   1.  →
   1.  →
-</details>
+</details> -->
 
 <!-- tabs:start -->
 
@@ -247,10 +272,11 @@ const example {
 
 #### ** More information / Notes **
 
-1. [How To Read Function Type Signatures](https://www.youtube.com/watch?v=BtFdmg8uhNY)
-  - Skip 1&#58;xx&#58;xx to 1&#58;03&#58;04. He makes a mistake explaining "" and it's important to just skip this part to keep from being confused. Thing is that it's easy to make that mistake as I would have to so I'm happy he caught it.
-2. Example `someJust.map(anInt -> Just.of(toString(anInt))` has the type `Maybe int ~> (int -> Maybe string) -> Maybe String`. But what you cannot do is change the containing type like go from a `Maybe int -> Eiher int`.  That’s a natural transformation and that happens outside of map.
+1. There is something to note with type constraints. With the example `Chain m` the `m` variable is a "placeholder" for an "instance" of `Chain`. It's hard to say that this is actually an instance of `Chain` but rather something that is of type `Chain`. Something that is subject to all the rules of `Chain`. you can think of it, for now, as an `Interface` like in OOP.
+1. Example `someJust.map(anInt -> Just.of(toString(anInt))` has the type `Maybe int ~> (int -> Maybe string) -> Maybe String`. But what you cannot do is change the containing type like go from a `Maybe int -> Eiher int`.  That’s a natural transformation and that happens outside of map.
   - From [@Todd Brown](https://www.linkedin.com/in/tb02118/)
+1. [How To Read Function Type Signatures](https://youtu.be/BtFdmg8uhNY?t=3779)
+  - Skip 1&#58;xx&#58;xx to 1&#58;03&#58;04. He makes a mistake explaining "" and it's important to just skip this part to keep from being confused. Thing is that it's easy to make that mistake as I would have to so I'm happy he caught it.
 
 <!-- tabs:end -->
 
