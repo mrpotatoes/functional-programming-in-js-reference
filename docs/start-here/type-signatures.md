@@ -250,7 +250,7 @@ const example {
 1. [How To Read Function Type Signatures](https://www.youtube.com/watch?v=BtFdmg8uhNY)
   - Skip 1&#58;xx&#58;xx to 1&#58;03&#58;04. He makes a mistake explaining "" and it's important to just skip this part to keep from being confused. Thing is that it's easy to make that mistake as I would have to so I'm happy he caught it.
 2. Example `someJust.map(anInt -> Just.of(toString(anInt))` has the type `Maybe int ~> (int -> Maybe string) -> Maybe String`. But what you cannot do is change the containing type like go from a `Maybe int -> Eiher int`.  That’s a natural transformation and that happens outside of map.
-  - From Todd Brown
+  - From [@Todd Brown](https://www.linkedin.com/in/tb02118/)
 
 <!-- tabs:end -->
 
