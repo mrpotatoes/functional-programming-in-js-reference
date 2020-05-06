@@ -30,7 +30,7 @@ Bear with me a moment while I go on a [related] tangent.
 
 Consider a function just a mapping of values of one domain to another. Meaning that if you give it a particular set of inputs you ALWAYS get the same outputs from the co-domain. So, for instance, if I were to pass the `add()` function `1` and `2` I would ALWAYS get `3`. If I got anything other than `3` then the function would be broken. You could consider this for all possible combinations of 2 integers.
 
-![](/./domain.jpg)
+![](./domain.jpg)
 
 This brings up some interesting ideas too. If you've ever used a `jest` snapshot it'll create a file on the system of the output of that JSX. This wouldn't be possible if you give that function/JSX the same inputs and the output is always different. This is the same exact thing with functions. They are just mapping from one to another. The domain to the co-domain.
 
