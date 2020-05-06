@@ -187,11 +187,49 @@ const example {
 
 ## Some examples
 
-| Puzzle | Explained |
-|-----|---|
-| `fantasy-land/compose :: Semigroupoid c => c i j ~> c j k -> c i k` | ? |
-| `fantasy-land/chain :: Chain m => m a ~> (a -> m b) -> m b` | ? |
-| `fantasy-land/id :: Category c => () -> c a a` | ? |
+<details>
+  <summary>
+    <b><code>fantasy-land/chain :: Chain m => m a ~> (a -> m b) -> m b</code></b>
+  </summary>
+<br />
+
+  | Icongraphy | Explained |
+  |-----|---|
+  | `fantasy-land/chain` | Is the function. It's called `chain` |
+  | `::` | Is a member of |
+  |  `Chain m` | On an object of some subtype of `Chain` generically referenced as `m`.<br /><br /> This is the `Typeclass` portion I mentioned above.  |
+  |  `m a` | That type `m` boxes some other type `a` |
+  | `~>` | `a` is a method on `m` |
+  | `(a -> m b)` | Takes an function from the boxed type `a` to another instance of the same container type `m` with boxed type `b`<sup>2</sup> |
+  | `m b` | The return value is of the same container (e.g. Monad) with a different boxed type `b` which may or may not be of the same type `a` |
+
+</details>
+
+<details>
+  <summary>
+    <i>(unfinished)</i><b><code>fantasy-land/id :: Category c => () -> c a a</code></b>
+  </summary>
+
+  1. `fantasy-land/chain` →
+  1. `::` → Is a member of
+  1.  →
+  1.  →
+  1.  →
+  1.  →
+</details>
+
+<details>
+  <summary>
+    <i>(unfinished)</i><b><code>fantasy-land/compose :: Semigroupoid c => c i j ~> c j k -> c i k</code></b>
+  </summary>
+
+  1. `fantasy-land/chain` →
+  1. `::` → Is a member of
+  1.  →
+  1.  →
+  1.  →
+  1.  →
+</details>
 
 <!-- tabs:start -->
 
@@ -211,6 +249,8 @@ const example {
 
 1. [How To Read Function Type Signatures](https://www.youtube.com/watch?v=BtFdmg8uhNY)
   - Skip 1&#58;xx&#58;xx to 1&#58;03&#58;04. He makes a mistake explaining "" and it's important to just skip this part to keep from being confused. Thing is that it's easy to make that mistake as I would have to so I'm happy he caught it.
+2. Example `someJust.map(anInt -> Just.of(toString(anInt))` has the type `Maybe int ~> (int -> Maybe string) -> Maybe String`. But what you cannot do is change the containing type like go from a `Maybe int -> Eiher int`.  That’s a natural transformation and that happens outside of map.
+  - From Todd Brown
 
 <!-- tabs:end -->
 
