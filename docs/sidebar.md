@@ -97,6 +97,9 @@
   * ~CQRS/ES~
   * ~Handling state~
 
+* [Blog](blog/index.md)
+  * [Testing Explained](blog/testing-explained.md)
+
 * [Example Projects](example-projects/index.md)
   * ~Example 1~
   * ~Example 2~
