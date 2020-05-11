@@ -98,7 +98,7 @@
   * ~Handling state~
 
 * [Blog](blog/index.md)
-  * [Testing Explained](blog/testing-explained.md)
+  * [Testing Explained](blog/testing-explained/entry.md)
 
 * [Example Projects](example-projects/index.md)
   * ~Example 1~
