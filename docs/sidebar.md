@@ -9,7 +9,7 @@
   * [Glossary](start-here/glossary.md)
   * [Todo](start-here/todo.md)
 
-* [Algebras (0/73 complete)](foundational/index.md)
+* [Algebras (3/47 complete)](foundational/index.md)
   * [Unions, Tagged Sums & ADTs](foundational/adts/explain.md)
     * [[Theory] Sum, Products, etc.](foundational/adts/sums-products.md)
     * [Pattern Matching](foundational/adts/pattern-matching.md)
