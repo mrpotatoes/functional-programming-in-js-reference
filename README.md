@@ -1,3 +1,6 @@
+# TODO
+Turn into "monorepo" and pull in my other FP repos.
+
 # [Functional Programming in JS Reference](https://mrpotatoes.github.io/functional-programming-in-js-reference/)
 
 This is the github repo for the site AND the source code that is showed on the site.
